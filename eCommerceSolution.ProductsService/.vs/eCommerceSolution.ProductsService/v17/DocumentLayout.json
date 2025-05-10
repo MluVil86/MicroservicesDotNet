@@ -3,60 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2DE990CE-BFE8-4230-87B7-E399AF6BFDE3}|eCommerce.Infrastructure\\eCommerce.Infrastructure.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\ecommerce.infrastructure\\dbcontext\\productdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DE990CE-BFE8-4230-87B7-E399AF6BFDE3}|eCommerce.Infrastructure\\eCommerce.Infrastructure.csproj|solutionrelative:ecommerce.infrastructure\\dbcontext\\productdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{50C6048B-7EB2-4560-A4D7-0DA9C5B5FE87}|ProductsService.API\\ProductsService.API.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\productsservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C6048B-7EB2-4560-A4D7-0DA9C5B5FE87}|ProductsService.API\\ProductsService.API.csproj|solutionrelative:productsservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{902CF4DB-E84D-4C02-A7B6-90908C4368E2}|eCommerce.Core\\eCommerce.Core.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\ecommerce.core\\dto\\productaddrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{902CF4DB-E84D-4C02-A7B6-90908C4368E2}|eCommerce.Core\\eCommerce.Core.csproj|solutionrelative:ecommerce.core\\dto\\productaddrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E982802B-453F-4062-84B7-1BC7752B3FD8}|ProductsService.BusinessLogicLayer\\ProductsService.BusinessLogicLayer.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\productsservice.businesslogiclayer\\dto\\categoryoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E982802B-453F-4062-84B7-1BC7752B3FD8}|ProductsService.BusinessLogicLayer\\ProductsService.BusinessLogicLayer.csproj|solutionrelative:productsservice.businesslogiclayer\\dto\\categoryoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BD84C0D-4DE2-4C7F-949F-3EA9F268FB9D}|eCommerce.API\\eCommerce.API.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\ecommerce.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1BD84C0D-4DE2-4C7F-949F-3EA9F268FB9D}|eCommerce.API\\eCommerce.API.csproj|solutionrelative:ecommerce.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{50C6048B-7EB2-4560-A4D7-0DA9C5B5FE87}|ProductsService.API\\ProductsService.API.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\productsservice.api\\apiendpoints\\productapiendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C6048B-7EB2-4560-A4D7-0DA9C5B5FE87}|ProductsService.API\\ProductsService.API.csproj|solutionrelative:productsservice.api\\apiendpoints\\productapiendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DE990CE-BFE8-4230-87B7-E399AF6BFDE3}|eCommerce.Infrastructure\\eCommerce.Infrastructure.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\ecommerce.infrastructure\\repositories\\productrepsitory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DE990CE-BFE8-4230-87B7-E399AF6BFDE3}|eCommerce.Infrastructure\\eCommerce.Infrastructure.csproj|solutionrelative:ecommerce.infrastructure\\repositories\\productrepsitory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FCB108CD-CB9B-4845-899A-C44B981B677A}|ProductsService.DataAccessLayer\\ProductsService.DataAccessLayer.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\productsservice.dataaccesslayer\\repository\\productsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCB108CD-CB9B-4845-899A-C44B981B677A}|ProductsService.DataAccessLayer\\ProductsService.DataAccessLayer.csproj|solutionrelative:productsservice.dataaccesslayer\\repository\\productsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{902CF4DB-E84D-4C02-A7B6-90908C4368E2}|eCommerce.Core\\eCommerce.Core.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\ecommerce.core\\repositorycontracts\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{902CF4DB-E84D-4C02-A7B6-90908C4368E2}|eCommerce.Core\\eCommerce.Core.csproj|solutionrelative:ecommerce.core\\repositorycontracts\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E982802B-453F-4062-84B7-1BC7752B3FD8}|ProductsService.BusinessLogicLayer\\ProductsService.BusinessLogicLayer.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\productsservice.businesslogiclayer\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E982802B-453F-4062-84B7-1BC7752B3FD8}|ProductsService.BusinessLogicLayer\\ProductsService.BusinessLogicLayer.csproj|solutionrelative:productsservice.businesslogiclayer\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{902CF4DB-E84D-4C02-A7B6-90908C4368E2}|eCommerce.Core\\eCommerce.Core.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\ecommerce.core\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{902CF4DB-E84D-4C02-A7B6-90908C4368E2}|eCommerce.Core\\eCommerce.Core.csproj|solutionrelative:ecommerce.core\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FCB108CD-CB9B-4845-899A-C44B981B677A}|ProductsService.DataAccessLayer\\ProductsService.DataAccessLayer.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\productsservice.dataaccesslayer\\context\\productdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCB108CD-CB9B-4845-899A-C44B981B677A}|ProductsService.DataAccessLayer\\ProductsService.DataAccessLayer.csproj|solutionrelative:productsservice.dataaccesslayer\\context\\productdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DE990CE-BFE8-4230-87B7-E399AF6BFDE3}|eCommerce.Infrastructure\\eCommerce.Infrastructure.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\ecommerce.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DE990CE-BFE8-4230-87B7-E399AF6BFDE3}|eCommerce.Infrastructure\\eCommerce.Infrastructure.csproj|solutionrelative:ecommerce.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E982802B-453F-4062-84B7-1BC7752B3FD8}|ProductsService.BusinessLogicLayer\\ProductsService.BusinessLogicLayer.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\productsservice.businesslogiclayer\\servicecontracts\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E982802B-453F-4062-84B7-1BC7752B3FD8}|ProductsService.BusinessLogicLayer\\ProductsService.BusinessLogicLayer.csproj|solutionrelative:productsservice.businesslogiclayer\\servicecontracts\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{902CF4DB-E84D-4C02-A7B6-90908C4368E2}|eCommerce.Core\\eCommerce.Core.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\ecommerce.core\\dependecnyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{902CF4DB-E84D-4C02-A7B6-90908C4368E2}|eCommerce.Core\\eCommerce.Core.csproj|solutionrelative:ecommerce.core\\dependecnyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E982802B-453F-4062-84B7-1BC7752B3FD8}|ProductsService.BusinessLogicLayer\\ProductsService.BusinessLogicLayer.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\productsservice.businesslogiclayer\\mapper\\producttoproductresponsemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E982802B-453F-4062-84B7-1BC7752B3FD8}|ProductsService.BusinessLogicLayer\\ProductsService.BusinessLogicLayer.csproj|solutionrelative:productsservice.businesslogiclayer\\mapper\\producttoproductresponsemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{902CF4DB-E84D-4C02-A7B6-90908C4368E2}|eCommerce.Core\\eCommerce.Core.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\ecommerce.core\\servicecontracrs\\iproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{902CF4DB-E84D-4C02-A7B6-90908C4368E2}|eCommerce.Core\\eCommerce.Core.csproj|solutionrelative:ecommerce.core\\servicecontracrs\\iproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FCB108CD-CB9B-4845-899A-C44B981B677A}|ProductsService.DataAccessLayer\\ProductsService.DataAccessLayer.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\productsservice.dataaccesslayer\\dependancyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCB108CD-CB9B-4845-899A-C44B981B677A}|ProductsService.DataAccessLayer\\ProductsService.DataAccessLayer.csproj|solutionrelative:productsservice.dataaccesslayer\\dependancyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{902CF4DB-E84D-4C02-A7B6-90908C4368E2}|eCommerce.Core\\eCommerce.Core.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\ecommerce.core\\dto\\productupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{902CF4DB-E84D-4C02-A7B6-90908C4368E2}|eCommerce.Core\\eCommerce.Core.csproj|solutionrelative:ecommerce.core\\dto\\productupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{902CF4DB-E84D-4C02-A7B6-90908C4368E2}|eCommerce.Core\\eCommerce.Core.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\ecommerce.core\\dto\\productresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{902CF4DB-E84D-4C02-A7B6-90908C4368E2}|eCommerce.Core\\eCommerce.Core.csproj|solutionrelative:ecommerce.core\\dto\\productresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{902CF4DB-E84D-4C02-A7B6-90908C4368E2}|eCommerce.Core\\eCommerce.Core.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\ecommerce.core\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{902CF4DB-E84D-4C02-A7B6-90908C4368E2}|eCommerce.Core\\eCommerce.Core.csproj|solutionrelative:ecommerce.core\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DE990CE-BFE8-4230-87B7-E399AF6BFDE3}|eCommerce.Infrastructure\\eCommerce.Infrastructure.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\ecommerce.infrastructure\\ecommerce.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{2DE990CE-BFE8-4230-87B7-E399AF6BFDE3}|eCommerce.Infrastructure\\eCommerce.Infrastructure.csproj|solutionrelative:ecommerce.infrastructure\\ecommerce.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{902CF4DB-E84D-4C02-A7B6-90908C4368E2}|eCommerce.Core\\eCommerce.Core.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\ecommerce.core\\ecommerce.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{902CF4DB-E84D-4C02-A7B6-90908C4368E2}|eCommerce.Core\\eCommerce.Core.csproj|solutionrelative:ecommerce.core\\ecommerce.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{E982802B-453F-4062-84B7-1BC7752B3FD8}|ProductsService.BusinessLogicLayer\\ProductsService.BusinessLogicLayer.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.productsservice\\productsservice.businesslogiclayer\\dependancyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E982802B-453F-4062-84B7-1BC7752B3FD8}|ProductsService.BusinessLogicLayer\\ProductsService.BusinessLogicLayer.csproj|solutionrelative:productsservice.businesslogiclayer\\dependancyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,184 +54,132 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.API\\appsettings.json",
-              "RelativeDocumentMoniker": "eCommerce.API\\appsettings.json",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.API\\appsettings.json",
-              "RelativeToolTip": "eCommerce.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-25T19:38:31.39Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductRepsitory.cs",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Infrastructure\\Repositories\\ProductRepsitory.cs",
-              "RelativeDocumentMoniker": "eCommerce.Infrastructure\\Repositories\\ProductRepsitory.cs",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Infrastructure\\Repositories\\ProductRepsitory.cs",
-              "RelativeToolTip": "eCommerce.Infrastructure\\Repositories\\ProductRepsitory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T19:30:06.803Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProductAddRequest.cs",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Core\\DTO\\ProductAddRequest.cs",
-              "RelativeDocumentMoniker": "eCommerce.Core\\DTO\\ProductAddRequest.cs",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Core\\DTO\\ProductAddRequest.cs",
-              "RelativeToolTip": "eCommerce.Core\\DTO\\ProductAddRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Title": "CategoryOptions.cs",
+              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\ProductsService.BusinessLogicLayer\\DTO\\CategoryOptions.cs",
+              "RelativeDocumentMoniker": "ProductsService.BusinessLogicLayer\\DTO\\CategoryOptions.cs",
+              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\ProductsService.BusinessLogicLayer\\DTO\\CategoryOptions.cs",
+              "RelativeToolTip": "ProductsService.BusinessLogicLayer\\DTO\\CategoryOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T12:32:52.348Z",
+              "WhenOpened": "2025-05-10T16:11:33.462Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Infrastructure\\DbContext\\ProductDbContext.cs",
-              "RelativeDocumentMoniker": "eCommerce.Infrastructure\\DbContext\\ProductDbContext.cs",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Infrastructure\\DbContext\\ProductDbContext.cs",
-              "RelativeToolTip": "eCommerce.Infrastructure\\DbContext\\ProductDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ProductAPIEndpoints.cs",
+              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\ProductsService.API\\APIEndpoints\\ProductAPIEndpoints.cs",
+              "RelativeDocumentMoniker": "ProductsService.API\\APIEndpoints\\ProductAPIEndpoints.cs",
+              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\ProductsService.API\\APIEndpoints\\ProductAPIEndpoints.cs",
+              "RelativeToolTip": "ProductsService.API\\APIEndpoints\\ProductAPIEndpoints.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAewFQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T12:00:16.577Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Core\\RepositoryContracts\\IProductRepository.cs",
-              "RelativeDocumentMoniker": "eCommerce.Core\\RepositoryContracts\\IProductRepository.cs",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Core\\RepositoryContracts\\IProductRepository.cs",
-              "RelativeToolTip": "eCommerce.Core\\RepositoryContracts\\IProductRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T13:05:58.465Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Infrastructure\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "eCommerce.Infrastructure\\DependencyInjection.cs",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Infrastructure\\DependencyInjection.cs",
-              "RelativeToolTip": "eCommerce.Infrastructure\\DependencyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T11:47:07.304Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DependecnyInjection.cs",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Core\\DependecnyInjection.cs",
-              "RelativeDocumentMoniker": "eCommerce.Core\\DependecnyInjection.cs",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Core\\DependecnyInjection.cs",
-              "RelativeToolTip": "eCommerce.Core\\DependecnyInjection.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T11:47:54.998Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Core\\Services\\ProductService.cs",
-              "RelativeDocumentMoniker": "eCommerce.Core\\Services\\ProductService.cs",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Core\\Services\\ProductService.cs",
-              "RelativeToolTip": "eCommerce.Core\\Services\\ProductService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAUwCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T12:59:18.546Z",
+              "WhenOpened": "2025-05-10T10:11:31.278Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "IProduct.cs",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Core\\ServiceContracrs\\IProduct.cs",
-              "RelativeDocumentMoniker": "eCommerce.Core\\ServiceContracrs\\IProduct.cs",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Core\\ServiceContracrs\\IProduct.cs",
-              "RelativeToolTip": "eCommerce.Core\\ServiceContracrs\\IProduct.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Title": "DependancyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\ProductsService.DataAccessLayer\\DependancyInjection.cs",
+              "RelativeDocumentMoniker": "ProductsService.DataAccessLayer\\DependancyInjection.cs",
+              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\ProductsService.DataAccessLayer\\DependancyInjection.cs",
+              "RelativeToolTip": "ProductsService.DataAccessLayer\\DependancyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T12:40:04.908Z",
+              "WhenOpened": "2025-05-10T10:33:47.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\ProductsService.API\\Program.cs",
+              "RelativeDocumentMoniker": "ProductsService.API\\Program.cs",
+              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\ProductsService.API\\Program.cs",
+              "RelativeToolTip": "ProductsService.API\\Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAB8AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T10:34:59.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\ProductsService.DataAccessLayer\\Context\\ProductDbContext.cs",
+              "RelativeDocumentMoniker": "ProductsService.DataAccessLayer\\Context\\ProductDbContext.cs",
+              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\ProductsService.DataAccessLayer\\Context\\ProductDbContext.cs",
+              "RelativeToolTip": "ProductsService.DataAccessLayer\\Context\\ProductDbContext.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAawBUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T10:27:03.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\ProductsService.BusinessLogicLayer\\ServiceContracts\\IProductService.cs",
+              "RelativeDocumentMoniker": "ProductsService.BusinessLogicLayer\\ServiceContracts\\IProductService.cs",
+              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\ProductsService.BusinessLogicLayer\\ServiceContracts\\IProductService.cs",
+              "RelativeToolTip": "ProductsService.BusinessLogicLayer\\ServiceContracts\\IProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T10:20:31.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\ProductsService.DataAccessLayer\\Repository\\ProductsRepository.cs",
+              "RelativeDocumentMoniker": "ProductsService.DataAccessLayer\\Repository\\ProductsRepository.cs",
+              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\ProductsService.DataAccessLayer\\Repository\\ProductsRepository.cs",
+              "RelativeToolTip": "ProductsService.DataAccessLayer\\Repository\\ProductsRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAawBwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T10:11:48.228Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "ProductUpdateRequest.cs",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Core\\DTO\\ProductUpdateRequest.cs",
-              "RelativeDocumentMoniker": "eCommerce.Core\\DTO\\ProductUpdateRequest.cs",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Core\\DTO\\ProductUpdateRequest.cs",
-              "RelativeToolTip": "eCommerce.Core\\DTO\\ProductUpdateRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Title": "DependancyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\ProductsService.BusinessLogicLayer\\DependancyInjection.cs",
+              "RelativeDocumentMoniker": "ProductsService.BusinessLogicLayer\\DependancyInjection.cs",
+              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\ProductsService.BusinessLogicLayer\\DependancyInjection.cs",
+              "RelativeToolTip": "ProductsService.BusinessLogicLayer\\DependancyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T12:37:45.773Z",
+              "WhenOpened": "2025-05-10T10:33:35.95Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ProductResponse.cs",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Core\\DTO\\ProductResponse.cs",
-              "RelativeDocumentMoniker": "eCommerce.Core\\DTO\\ProductResponse.cs",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Core\\DTO\\ProductResponse.cs",
-              "RelativeToolTip": "eCommerce.Core\\DTO\\ProductResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAGAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\ProductsService.BusinessLogicLayer\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "ProductsService.BusinessLogicLayer\\Services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\ProductsService.BusinessLogicLayer\\Services\\ProductService.cs",
+              "RelativeToolTip": "ProductsService.BusinessLogicLayer\\Services\\ProductService.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAqwFoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T12:33:51.505Z",
+              "WhenOpened": "2025-05-10T10:22:24.234Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Core\\Entities\\Product.cs",
-              "RelativeDocumentMoniker": "eCommerce.Core\\Entities\\Product.cs",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Core\\Entities\\Product.cs",
-              "RelativeToolTip": "eCommerce.Core\\Entities\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T11:55:19.739Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "eCommerce.Infrastructure",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Infrastructure\\eCommerce.Infrastructure.csproj",
-              "RelativeDocumentMoniker": "eCommerce.Infrastructure\\eCommerce.Infrastructure.csproj",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Infrastructure\\eCommerce.Infrastructure.csproj",
-              "RelativeToolTip": "eCommerce.Infrastructure\\eCommerce.Infrastructure.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-25T11:53:40.885Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "eCommerce.Core",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Core\\eCommerce.Core.csproj",
-              "RelativeDocumentMoniker": "eCommerce.Core\\eCommerce.Core.csproj",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\eCommerce.Core\\eCommerce.Core.csproj",
-              "RelativeToolTip": "eCommerce.Core\\eCommerce.Core.csproj",
+              "DocumentIndex": 7,
+              "Title": "ProductToProductResponseMappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\ProductsService.BusinessLogicLayer\\Mapper\\ProductToProductResponseMappingProfile.cs",
+              "RelativeDocumentMoniker": "ProductsService.BusinessLogicLayer\\Mapper\\ProductToProductResponseMappingProfile.cs",
+              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.ProductsService\\ProductsService.BusinessLogicLayer\\Mapper\\ProductToProductResponseMappingProfile.cs",
+              "RelativeToolTip": "ProductsService.BusinessLogicLayer\\Mapper\\ProductToProductResponseMappingProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-25T11:50:36.663Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T11:21:17.857Z",
               "EditorCaption": ""
             }
           ]

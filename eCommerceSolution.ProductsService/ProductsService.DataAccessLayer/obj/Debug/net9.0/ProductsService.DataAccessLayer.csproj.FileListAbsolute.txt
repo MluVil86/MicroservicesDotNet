@@ -1,0 +1,13 @@
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.DataAccessLayer\bin\Debug\net9.0\ProductsService.DataAccessLayer.deps.json
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.DataAccessLayer\bin\Debug\net9.0\ProductsService.DataAccessLayer.dll
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.DataAccessLayer\bin\Debug\net9.0\ProductsService.DataAccessLayer.pdb
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.DataAccessLayer\obj\Debug\net9.0\ProductsService.DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.DataAccessLayer\obj\Debug\net9.0\ProductsService.DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.DataAccessLayer\obj\Debug\net9.0\ProductsService.DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.DataAccessLayer\obj\Debug\net9.0\ProductsService.DataAccessLayer.AssemblyInfo.cs
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.DataAccessLayer\obj\Debug\net9.0\ProductsService.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.DataAccessLayer\obj\Debug\net9.0\ProductsService.DataAccessLayer.sourcelink.json
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.DataAccessLayer\obj\Debug\net9.0\ProductsService.DataAccessLayer.dll
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.DataAccessLayer\obj\Debug\net9.0\refint\ProductsService.DataAccessLayer.dll
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.DataAccessLayer\obj\Debug\net9.0\ProductsService.DataAccessLayer.pdb
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.DataAccessLayer\obj\Debug\net9.0\ref\ProductsService.DataAccessLayer.dll

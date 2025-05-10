@@ -1,0 +1,16 @@
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.BusinessLogicLayer\bin\Debug\net9.0\ProductsService.BusinessLogicLayer.deps.json
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.BusinessLogicLayer\bin\Debug\net9.0\ProductsService.BusinessLogicLayer.dll
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.BusinessLogicLayer\bin\Debug\net9.0\ProductsService.BusinessLogicLayer.pdb
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.BusinessLogicLayer\bin\Debug\net9.0\ProductsService.DataAccessLayer.dll
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.BusinessLogicLayer\bin\Debug\net9.0\ProductsService.DataAccessLayer.pdb
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.BusinessLogicLayer\obj\Debug\net9.0\ProductsService.BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.BusinessLogicLayer\obj\Debug\net9.0\ProductsService.BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.BusinessLogicLayer\obj\Debug\net9.0\ProductsService.BusinessLogicLayer.AssemblyInfoInputs.cache
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.BusinessLogicLayer\obj\Debug\net9.0\ProductsService.BusinessLogicLayer.AssemblyInfo.cs
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.BusinessLogicLayer\obj\Debug\net9.0\ProductsService.BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.BusinessLogicLayer\obj\Debug\net9.0\ProductsService.BusinessLogicLayer.sourcelink.json
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.BusinessLogicLayer\obj\Debug\net9.0\Products.AB3C9F41.Up2Date
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.BusinessLogicLayer\obj\Debug\net9.0\ProductsService.BusinessLogicLayer.dll
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.BusinessLogicLayer\obj\Debug\net9.0\refint\ProductsService.BusinessLogicLayer.dll
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.BusinessLogicLayer\obj\Debug\net9.0\ProductsService.BusinessLogicLayer.pdb
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.BusinessLogicLayer\obj\Debug\net9.0\ref\ProductsService.BusinessLogicLayer.dll
