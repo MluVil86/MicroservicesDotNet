@@ -56,12 +56,6 @@ C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsServi
 C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.API\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.API\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.API\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.API\obj\Debug\net9.0\staticwebassets\msbuild.ProductsService.API.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.API\obj\Debug\net9.0\staticwebassets\msbuild.ProductsService.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.API\obj\Debug\net9.0\staticwebassets\msbuild.build.ProductsService.API.props
-C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.API\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.ProductsService.API.props
-C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.API\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.ProductsService.API.props
-C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.API\obj\Debug\net9.0\staticwebassets.pack.json
 C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.API\obj\Debug\net9.0\Products.A1440E90.Up2Date
 C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.API\obj\Debug\net9.0\ProductsService.API.dll
@@ -73,3 +67,8 @@ C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsServi
 C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.API\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.API\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.API\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.API\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\mlung\src\Microservices\eCommerceSolution.ProductsService\ProductsService.API\obj\Debug\net9.0\staticwebassets.build.json.cache

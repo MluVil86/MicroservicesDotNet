@@ -3,56 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9BD18175-FC76-4197-9415-58A93F517DF4}|eCommerce.API\\eCommerce.API.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.userservice\\ecommerce.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9BD18175-FC76-4197-9415-58A93F517DF4}|eCommerce.API\\eCommerce.API.csproj|solutionrelative:ecommerce.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4F0EB22-01B6-40C9-9559-F1D9347C6A77}|eCommerce.Core\\eCommerce.Core.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.userservice\\ecommerce.core\\dto\\authenticationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4F0EB22-01B6-40C9-9559-F1D9347C6A77}|eCommerce.Core\\eCommerce.Core.csproj|solutionrelative:ecommerce.core\\dto\\authenticationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4F0EB22-01B6-40C9-9559-F1D9347C6A77}|eCommerce.Core\\eCommerce.Core.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.userservice\\ecommerce.core\\dto\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4F0EB22-01B6-40C9-9559-F1D9347C6A77}|eCommerce.Core\\eCommerce.Core.csproj|solutionrelative:ecommerce.core\\dto\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4F0EB22-01B6-40C9-9559-F1D9347C6A77}|eCommerce.Core\\eCommerce.Core.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.userservice\\ecommerce.core\\dto\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4F0EB22-01B6-40C9-9559-F1D9347C6A77}|eCommerce.Core\\eCommerce.Core.csproj|solutionrelative:ecommerce.core\\dto\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4F0EB22-01B6-40C9-9559-F1D9347C6A77}|eCommerce.Core\\eCommerce.Core.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.userservice\\ecommerce.core\\validators\\registerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4F0EB22-01B6-40C9-9559-F1D9347C6A77}|eCommerce.Core\\eCommerce.Core.csproj|solutionrelative:ecommerce.core\\validators\\registerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4F0EB22-01B6-40C9-9559-F1D9347C6A77}|eCommerce.Core\\eCommerce.Core.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.userservice\\ecommerce.core\\validators\\loginrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4F0EB22-01B6-40C9-9559-F1D9347C6A77}|eCommerce.Core\\eCommerce.Core.csproj|solutionrelative:ecommerce.core\\validators\\loginrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AF59CCA4-70F2-4D88-A269-DA8C67802C6D}|eCommerce.Infrastructure\\eCommerce.Infrastructure.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.userservice\\ecommerce.infrastructure\\dbcontext\\dapperdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AF59CCA4-70F2-4D88-A269-DA8C67802C6D}|eCommerce.Infrastructure\\eCommerce.Infrastructure.csproj|solutionrelative:ecommerce.infrastructure\\dbcontext\\dapperdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BD18175-FC76-4197-9415-58A93F517DF4}|eCommerce.API\\eCommerce.API.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.userservice\\ecommerce.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BD18175-FC76-4197-9415-58A93F517DF4}|eCommerce.API\\eCommerce.API.csproj|solutionrelative:ecommerce.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BD18175-FC76-4197-9415-58A93F517DF4}|eCommerce.API\\eCommerce.API.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.userservice\\ecommerce.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9BD18175-FC76-4197-9415-58A93F517DF4}|eCommerce.API\\eCommerce.API.csproj|solutionrelative:ecommerce.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4F0EB22-01B6-40C9-9559-F1D9347C6A77}|eCommerce.Core\\eCommerce.Core.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.userservice\\ecommerce.core\\dependancyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4F0EB22-01B6-40C9-9559-F1D9347C6A77}|eCommerce.Core\\eCommerce.Core.csproj|solutionrelative:ecommerce.core\\dependancyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4F0EB22-01B6-40C9-9559-F1D9347C6A77}|eCommerce.Core\\eCommerce.Core.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.userservice\\ecommerce.core\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4F0EB22-01B6-40C9-9559-F1D9347C6A77}|eCommerce.Core\\eCommerce.Core.csproj|solutionrelative:ecommerce.core\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4F0EB22-01B6-40C9-9559-F1D9347C6A77}|eCommerce.Core\\eCommerce.Core.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.userservice\\ecommerce.core\\servicecontracts\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4F0EB22-01B6-40C9-9559-F1D9347C6A77}|eCommerce.Core\\eCommerce.Core.csproj|solutionrelative:ecommerce.core\\servicecontracts\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4F0EB22-01B6-40C9-9559-F1D9347C6A77}|eCommerce.Core\\eCommerce.Core.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.userservice\\ecommerce.core\\dto\\genderoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4F0EB22-01B6-40C9-9559-F1D9347C6A77}|eCommerce.Core\\eCommerce.Core.csproj|solutionrelative:ecommerce.core\\dto\\genderoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AF59CCA4-70F2-4D88-A269-DA8C67802C6D}|eCommerce.Infrastructure\\eCommerce.Infrastructure.csproj|c:\\users\\mlung\\src\\microservices\\ecommercesolution.userservice\\ecommerce.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF59CCA4-70F2-4D88-A269-DA8C67802C6D}|eCommerce.Infrastructure\\eCommerce.Infrastructure.csproj|solutionrelative:ecommerce.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -67,160 +23,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.API\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "eCommerce.API\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.API\\Properties\\launchSettings.json",
-              "RelativeToolTip": "eCommerce.API\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-10T16:57:32.851Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthenticationResponse.cs",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Core\\DTO\\AuthenticationResponse.cs",
-              "RelativeDocumentMoniker": "eCommerce.Core\\DTO\\AuthenticationResponse.cs",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Core\\DTO\\AuthenticationResponse.cs",
-              "RelativeToolTip": "eCommerce.Core\\DTO\\AuthenticationResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T13:58:50.996Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "DapperDbContext.cs",
               "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Infrastructure\\DbContext\\DapperDbContext.cs",
               "RelativeDocumentMoniker": "eCommerce.Infrastructure\\DbContext\\DapperDbContext.cs",
               "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Infrastructure\\DbContext\\DapperDbContext.cs",
               "RelativeToolTip": "eCommerce.Infrastructure\\DbContext\\DapperDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T12:00:05.35Z"
+              "WhenOpened": "2025-06-29T15:43:54.9Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RegisterRequest.cs",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Core\\DTO\\RegisterRequest.cs",
-              "RelativeDocumentMoniker": "eCommerce.Core\\DTO\\RegisterRequest.cs",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Core\\DTO\\RegisterRequest.cs",
-              "RelativeToolTip": "eCommerce.Core\\DTO\\RegisterRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "eCommerce.Infrastructure\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "eCommerce.Infrastructure\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T12:39:11.088Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RegisterRequestValidator.cs",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Core\\Validators\\RegisterRequestValidator.cs",
-              "RelativeDocumentMoniker": "eCommerce.Core\\Validators\\RegisterRequestValidator.cs",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Core\\Validators\\RegisterRequestValidator.cs",
-              "RelativeToolTip": "eCommerce.Core\\Validators\\RegisterRequestValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T16:54:33.452Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginRequest.cs",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Core\\DTO\\LoginRequest.cs",
-              "RelativeDocumentMoniker": "eCommerce.Core\\DTO\\LoginRequest.cs",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Core\\DTO\\LoginRequest.cs",
-              "RelativeToolTip": "eCommerce.Core\\DTO\\LoginRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T12:39:06.806Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DependancyInjection.cs",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Core\\DependancyInjection.cs",
-              "RelativeDocumentMoniker": "eCommerce.Core\\DependancyInjection.cs",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Core\\DependancyInjection.cs",
-              "RelativeToolTip": "eCommerce.Core\\DependancyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T16:53:04.094Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.API\\Program.cs",
-              "RelativeDocumentMoniker": "eCommerce.API\\Program.cs",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.API\\Program.cs",
-              "RelativeToolTip": "eCommerce.API\\Program.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAswCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T19:16:43.4Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LoginRequestValidator.cs",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Core\\Validators\\LoginRequestValidator.cs",
-              "RelativeDocumentMoniker": "eCommerce.Core\\Validators\\LoginRequestValidator.cs",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Core\\Validators\\LoginRequestValidator.cs",
-              "RelativeToolTip": "eCommerce.Core\\Validators\\LoginRequestValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T16:54:38.453Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Core\\ServiceContracts\\IUserService.cs",
-              "RelativeDocumentMoniker": "eCommerce.Core\\ServiceContracts\\IUserService.cs",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Core\\ServiceContracts\\IUserService.cs",
-              "RelativeToolTip": "eCommerce.Core\\ServiceContracts\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T12:39:41.828Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Core\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "eCommerce.Core\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Core\\Services\\UserService.cs",
-              "RelativeToolTip": "eCommerce.Core\\Services\\UserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T12:58:56.571Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.API\\appsettings.json",
-              "RelativeDocumentMoniker": "eCommerce.API\\appsettings.json",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.API\\appsettings.json",
-              "RelativeToolTip": "eCommerce.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-24T19:16:28.97Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "GenderOptions.cs",
-              "DocumentMoniker": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Core\\DTO\\GenderOptions.cs",
-              "RelativeDocumentMoniker": "eCommerce.Core\\DTO\\GenderOptions.cs",
-              "ToolTip": "C:\\Users\\mlung\\src\\Microservices\\eCommerceSolution.UserService\\eCommerce.Core\\DTO\\GenderOptions.cs",
-              "RelativeToolTip": "eCommerce.Core\\DTO\\GenderOptions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T12:39:04.285Z"
+              "WhenOpened": "2025-06-29T15:43:33.612Z",
+              "EditorCaption": ""
             }
           ]
         }
