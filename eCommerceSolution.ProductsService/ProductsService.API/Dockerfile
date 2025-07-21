@@ -5,7 +5,6 @@ FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
 USER app
 WORKDIR /app
 EXPOSE 2025
-EXPOSE 2025
 
 # This stage is used to build the service project
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
@@ -22,16 +21,8 @@ FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
 RUN dotnet publish "./ProductsService.API.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
-#Define default values for variables (optional, can be overridden at build time)
-ARG SERVER=localhost
-ARG PORT=3306
-ARG DATABASE=ecommerceproductsdatabase
-ARG UID=sa
-ARG PASSWORD=password
-
 # This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENV ConnectionStrings__MySQLDataConnection = "server=${SERVER};port=${PORT};database=${DATABASE};uid=${UID};password=${PASSWORD}"
 ENTRYPOINT ["dotnet", "ProductsService.API.dll"]
