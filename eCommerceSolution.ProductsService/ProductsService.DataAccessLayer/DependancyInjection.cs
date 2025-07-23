@@ -12,14 +12,14 @@ public static class DependancyInjection
     public static IServiceCollection AddDataAccessLayer(this IServiceCollection services, IConfiguration configuration)
     {
         
-        string connectionStringTemplate = Environment.GetEnvironmentVariable("MySQLDataConnection")!;
+        string connectionStringTemplate = configuration["MySQLDataConnection"]!;
 
         string connectionString = connectionStringTemplate
-                                .Replace("$SERVER", Environment.GetEnvironmentVariable("SERVER"))
-                                .Replace("$PORT", Environment.GetEnvironmentVariable("PORT"))
-                                .Replace("$DATABASE", Environment.GetEnvironmentVariable("DATABASE"))
-                                .Replace("$UID", Environment.GetEnvironmentVariable("UID"))
-                                .Replace("$PASSWORD", Environment.GetEnvironmentVariable("PASSWORD"));
+                                .Replace("$SERVER", configuration["SERVER"])
+                                .Replace("$PORT", configuration["PORT"])
+                                .Replace("$DATABASE", configuration["DATABASE"])
+                                .Replace("$UID", configuration["UID"])
+                                .Replace("$PASSWORD", configuration["PASSWORD"]);
 
         services.AddDbContext<ProductDbContext>(options =>
         {                        

@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDataAccessLayer(builder.Configuration);
 builder.Services.AddDataBusinessLayer();
 
+builder.Configuration.AddEnvironmentVariables();
 
 builder.Services.AddControllers();
 
@@ -34,6 +35,7 @@ builder.Services.AddCors(options =>
         .AllowAnyHeader(); ;
     });
 });
+
 
 var app = builder.Build();
 
