@@ -5,22 +5,24 @@ services:
    MYSQL_ROOT_PASSWORD: p@ssw0rd
   volumes:
    - ./mysql-init:/docker-entrypoint-initdb.d
+  command: --lower_case_table_names=1
   networks:
    - products-microservice-network
   ports:
-   - "33306:3306"
+   - "3306:3306"
   hostname: mysql-host-productsmicroservice
 
  products-microservice:
-  image: productmicroservice:latest
+  image: productsmicroservice:1.0.1
   environment:
-   MYSQL_HOST: mysql-host-productsmicroservice
-   MYSQL_PORT: "3306"
-   MYSQL_PASSWORD: p@ssw0rd
-   MYSQL_DB: productsdb
-   ConnectionStrings__DefaultConnection="server=$SERVER;port=$PORT;database=$DATABASE;uid=$UID;password=$PASSWORD"
+   SERVER: localhost
+   PORT: ${MYSQL_PORT}
+   DATABASE: ${MYSQL_DB}   
+   UID: ${MySQL_UID}
+   PASSWORD: ${MYSQL_PASSWORD}
+   MySQLDataConn: ${MySQL_Conn}
   ports:
-   - "2025:2025"
+   - "2026:2026"
   networks:
    - products-microservice-network
   depends_on:
