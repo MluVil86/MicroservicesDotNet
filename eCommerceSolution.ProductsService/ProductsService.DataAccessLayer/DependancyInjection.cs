@@ -11,19 +11,21 @@ public static class DependancyInjection
 {
     public static IServiceCollection AddDataAccessLayer(this IServiceCollection services, IConfiguration configuration)
     {
-        
-        string connectionStringTemplate = configuration["MySQLDataConn"]!;
 
-        string connectionString = connectionStringTemplate
-                                .Replace("$SERVER", configuration["SERVER"])                                
-                                .Replace("$DATABASE", configuration["DATABASE"])
-                                .Replace("$PORT", configuration["PORT"])
-                                .Replace("$UID", configuration["UID"])
-                                .Replace("$PASSWORD", configuration["PASSWORD"]);
-        
+        //string connectionStringTemplate = Environment.GetEnvironmentVariable("MySQLDataConn")!;
+
+        //string connectionString = connectionStringTemplate
+        //                        .Replace("$SERVER", Environment.GetEnvironmentVariable("SERVER"))                                
+        //                        .Replace("$DATABASE", Environment.GetEnvironmentVariable("DATABASE"))
+        //                        .Replace("$PORT", Environment.GetEnvironmentVariable("PORT"))
+        //                        .Replace("$UID", Environment.GetEnvironmentVariable("UID"))
+        //                        .Replace("$PASSWORD", Environment.GetEnvironmentVariable("PASSWORD"));
+
+        string env = "Server=localhost;Port=3306;Database=ecommerceproductsdatabase;User Id=root;Password=p@ssw0rd";
+
         services.AddDbContext<ProductDbContext>(options =>
         {                        
-            options.UseMySQL(connectionString);
+            options.UseMySQL(env);
         });
 
         services.AddScoped<IProductRepository, ProductsRepository>();
