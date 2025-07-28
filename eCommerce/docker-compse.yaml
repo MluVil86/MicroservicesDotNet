@@ -5,6 +5,7 @@ services:
    MYSQL_ROOT_PASSWORD: ${mysql_pwd}
   volumes:
    - ./mysql-init:/docker-entrypoint-initdb.d
+   - /c/docker_local/mysql:/var/lib/mysql
   command: --lower_case_table_names=1
   networks:
    - ecommerce-microservice-network
@@ -34,7 +35,8 @@ services:
    POSTGRES_USER: ${pg_user}
    POSTGRES_DB: ${pg_db}
   volumes:
-   - ./postgres-init:/docker-entrypoint-initdb.d  
+   - ./postgres-init:/docker-entrypoint-initdb.d 
+   - /c/docker_local/psql:/var/lib/postgresql/data
   networks:
    - ecommerce-microservice-network
   ports:
