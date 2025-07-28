@@ -1,6 +1,6 @@
 services:
  mysqldb:
-  image: mysql:latest
+  image: mysql:8.4.3
   environment:
    MYSQL_ROOT_PASSWORD: p@ssw0rd
   volumes:
@@ -9,17 +9,17 @@ services:
   networks:
    - products-microservice-network
   ports:
-   - "33306:3306"
+   - "3306:3306"
   hostname: mysql-host-productsmicroservice
 
  products-microservice:
-  image: productsmicroservice:1.0
+  image: productsmicroservices:1.2
   environment:
-   SERVER: ${my_host}
-   PORT: ${my_port}
-   DATABASE: ${mysql__database}  
-   UID: ${my_user}
-   PASSWORD: ${mysql_pwd}   
+   MYSQL_HOST: ${mysql_host}
+   MYSQL_DATABASE: ${mysql_db}
+   MYSQL_PORT: ${mysql_port}  
+   MYSQL_UID: ${mysql_user}
+   MYSQL_PASSWORD: ${mysql_pwd}   
   ports:
    - "8081:8080"
   networks:

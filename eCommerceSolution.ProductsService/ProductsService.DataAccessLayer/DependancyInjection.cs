@@ -14,11 +14,11 @@ public static class DependancyInjection
         string connectionStringTemplate = configuration.GetConnectionString("AppConnection")!;
 
         string connectionString = connectionStringTemplate
-                                .Replace("$SERVER", Environment.GetEnvironmentVariable("SERVER"))
-                                .Replace("$DATABASE", Environment.GetEnvironmentVariable("DATABASE"))
-                                .Replace("$PORT", Environment.GetEnvironmentVariable("PORT"))
-                                .Replace("$UID", Environment.GetEnvironmentVariable("UID"))
-                                .Replace("$PASSWORD", Environment.GetEnvironmentVariable("PASSWORD"));
+                                .Replace("$MYSQL_HOST", Environment.GetEnvironmentVariable("MYSQL_HOST"))
+                                .Replace("$MYSQL_DATABASE", Environment.GetEnvironmentVariable("MYSQL_DATABASE"))
+                                .Replace("$MYSQL_PORT", Environment.GetEnvironmentVariable("MYSQL_PORT"))
+                                .Replace("$MYSQL_UID", Environment.GetEnvironmentVariable("MYSQL_UID"))
+                                .Replace("$MYSQL_PASSWORD", Environment.GetEnvironmentVariable("MYSQL_PASSWORD"));
         
         services.AddDbContext<ProductDbContext>(options =>
         {                        
@@ -30,3 +30,4 @@ public static class DependancyInjection
         return services;
     }
 }
+

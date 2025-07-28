@@ -10,8 +10,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDataAccessLayer(builder.Configuration);
 builder.Services.AddDataBusinessLayer();
 
-builder.Configuration.AddEnvironmentVariables();
-
 builder.Services.AddControllers();
 
 builder.Services.AddFluentValidationAutoValidation();
@@ -40,15 +38,17 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 app.UseExceptionHandlingMiddleware();
-
 app.UseRouting();
+
+//cors
 app.UseCors();
 
-app.UseHttpsRedirection();
-
+//swagger
 app.UseSwagger();
 app.UseSwaggerUI();
 
+//auth
+app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 

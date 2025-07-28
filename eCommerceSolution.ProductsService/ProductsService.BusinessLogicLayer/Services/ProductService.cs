@@ -125,7 +125,5 @@ public class ProductService : IProductService
         IEnumerable<ProductResponse?> getProductsResponse = _mapper.Map<IEnumerable<ProductResponse>>(getProducts);
 
         return getProductsResponse.ToList();
-    }
-
-    
+    }    
 }
