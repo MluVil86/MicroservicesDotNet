@@ -1,0 +1,61 @@
+services:
+ mysqldb:
+  image: mysql:8.4.3
+  environment:
+   MYSQL_ROOT_PASSWORD: ${mysql_pwd}
+  volumes:
+   - ./mysql-init:/docker-entrypoint-initdb.d
+  command: --lower_case_table_names=1
+  networks:
+   - ecommerce-microservice-network
+  ports:
+   - "3306:3306"
+  hostname: mysql-host-productsmicroservice
+
+ products-microservice:
+  image: productsmicroservices:1.2
+  environment:
+   MYSQL_HOST: ${mysql_host}
+   MYSQL_DATABASE: ${mysql_db}
+   MYSQL_PORT: ${mysql_port}  
+   MYSQL_UID: ${mysql_user}
+   MYSQL_PASSWORD: ${mysql_pwd}   
+  ports:
+   - "8080:8080"
+  networks:
+   - ecommerce-microservice-network
+  depends_on:
+   - mysqldb
+
+ postgresdb:
+  image: postgres:14.18
+  environment:
+   POSTGRES_PASSWORD: ${pg_pwd}
+   POSTGRES_USER: ${pg_user}
+   POSTGRES_DB: ${pg_db}
+  volumes:
+   - ./postgres-init:/docker-entrypoint-initdb.d  
+  networks:
+   - ecommerce-microservice-network
+  ports:
+   - "5432:5432"
+  hostname: mysql-host-productsmicroservice
+
+ users-microservice:
+  image: usersmicroservices:1.2
+  environment:
+   POSTGRES_HOST: ${pg_host}
+   POSTGRES_PORT: ${pg_port}
+   POSTGRES_DATABASE: ${pg_db}
+   POSTGRES_USERNAME: ${pg_user}
+   POSTGRES_PASSWORD: ${pg_pwd}  
+  ports:
+   - "9090:9090"
+  networks:
+   - ecommerce-microservice-network
+  depends_on:
+   - postgresdb
+
+networks:
+ ecommerce-microservice-network:
+  driver: bridge
