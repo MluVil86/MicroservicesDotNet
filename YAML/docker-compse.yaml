@@ -9,20 +9,19 @@ services:
   networks:
    - products-microservice-network
   ports:
-   - "3306:3306"
+   - "33306:3306"
   hostname: mysql-host-productsmicroservice
 
  products-microservice:
-  image: productsmicroservice:1.0.1
+  image: productsmicroservice:1.0
   environment:
-   SERVER: localhost
-   PORT: ${MYSQL_PORT}
-   DATABASE: ${MYSQL_DB}   
-   UID: ${MySQL_UID}
-   PASSWORD: ${MYSQL_PASSWORD}
-   MySQLDataConn: ${MySQL_Conn}
+   SERVER: ${my_host}
+   PORT: ${my_port}
+   DATABASE: ${mysql__database}  
+   UID: ${my_user}
+   PASSWORD: ${mysql_pwd}   
   ports:
-   - "2026:2026"
+   - "8081:8080"
   networks:
    - products-microservice-network
   depends_on:
