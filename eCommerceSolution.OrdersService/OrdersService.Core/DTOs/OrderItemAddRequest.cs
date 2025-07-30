@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace OrderService.BusinessLogicLayer.DTOs;
 
-public record OrderItemAddRequest
+public record OrderItemAddRequest(
+    Guid ProductID,
+    decimal UnitPrice,
+    int Quantity
+    )
 {
+    public OrderItemAddRequest() :this(default, default, default)
+    {        
+    }
 }

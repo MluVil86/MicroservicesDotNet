@@ -6,6 +6,14 @@ using System.Threading.Tasks;
 
 namespace OrderService.BusinessLogicLayer.DTOs;
 
-public record OrderUpdateRequest
+public record OrderUpdateRequest(
+    Guid ProductID,
+    decimal UnitPrice,
+    int Quantity
+    )
 {
+    public OrderUpdateRequest():this(default, default, default)
+    {
+        
+    }
 }
