@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OrderService.BusinessLogicLayer.DTOs;
+﻿namespace OrderService.BusinessLogicLayer.DTOs;
 
 public record OrderUpdateRequest(
-    Guid ProductID,
-    decimal UnitPrice,
-    int Quantity
+    Guid OrderID, 
+    Guid UserID, 
+    DateTime OrderDate, 
+    List<OrderItemAddRequest> OrderItems
     )
 {
-    public OrderUpdateRequest():this(default, default, default)
+    public OrderUpdateRequest():this(default, default, default, default)
     {
         
     }

@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OrderService.DataAccessLayer.Entities;
-
-namespace OrderService.BusinessLogicLayer.DTOs;
+﻿namespace OrderService.BusinessLogicLayer.DTOs;
 
 public record OrderAddRequest(
     Guid UserID,
