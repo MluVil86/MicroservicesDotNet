@@ -7,7 +7,6 @@ public record OrderItemUpdateRequest(
     )
 {
     public OrderItemUpdateRequest():this(default, default, default)
-    {
-        
+    {        
     }
 }

@@ -4,6 +4,8 @@ using FluentValidation;
 using OrderService.BusinessLogicLayer.Validators;
 using OrderService.BusinessLogicLayer.Mappers;
 using AutoMapper;
+using OrderService.BusinessLogicLayer.ServiceContracts;
+using OrderService.BusinessLogicLayer.Services;
 
 
 namespace OrderService.BusinessLogicLayer;
@@ -13,6 +15,7 @@ public static class DependencyInjection
     {        
         services.AddValidatorsFromAssemblyContaining<OrderAddRequestValidator>();
         services.AddAutoMapper(typeof(OrderToOrderResponseMappingProfile).Assembly);
+        services.AddScoped<IOrdersService, OrdersService>();
 
         return services;
     }

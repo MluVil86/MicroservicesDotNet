@@ -45,12 +45,12 @@ public class OrdersRepository : IOrdersRepository
         return   await (await _orders.FindAsync(filter)).FirstOrDefaultAsync();
     }
 
-    public async Task<IEnumerable<Order?>> GetOrders()
+    public async Task<IEnumerable<Order>?> GetOrders()
     {
         return (await _orders.FindAsync(Builders<Order>.Filter.Empty)).ToList();
     }
 
-    public async Task<IEnumerable<Order?>> GetOrdersByCondition(FilterDefinition<Order> filter)
+    public async Task<IEnumerable<Order>?> GetOrdersByCondition(FilterDefinition<Order> filter)
     {
         return (await _orders.FindAsync(filter)).ToList();
     }
