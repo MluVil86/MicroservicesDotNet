@@ -17,11 +17,13 @@ public class OrdersService : IOrdersService
     private readonly IValidator<OrderItemAddRequest> _validatorOrderItemAddRequest;
     private readonly IValidator<OrderItemUpdateRequest> _validatorOrderItemUpdateRequest;
     private readonly IValidator<OrderUpdateRequest> _validatorOrderUpdateRequest;
+    private readonly IOrdersValidator _ordersValidator;
     public OrdersService(IOrdersRepository ordersRepository, IMapper mapper, 
         IValidator<OrderAddRequest> validatorOrderAddRequest, 
         IValidator<OrderItemAddRequest> validatorOrderItemAddReques,
         IValidator<OrderItemUpdateRequest> validatorOrderItemUpdateRequest, 
-        IValidator<OrderUpdateRequest> validatorOrderUpdateRequest
+        IValidator<OrderUpdateRequest> validatorOrderUpdateRequest,
+        IOrdersValidator ordersValidator
         )
     {
         _ordersRepository = ordersRepository;
@@ -30,6 +32,7 @@ public class OrdersService : IOrdersService
         _validatorOrderItemAddRequest= validatorOrderItemAddReques;
         _validatorOrderItemUpdateRequest = validatorOrderItemUpdateRequest;
         _validatorOrderUpdateRequest = validatorOrderUpdateRequest;
+        _ordersValidator = ordersValidator;
     }
 
     public async Task<OrderResponse?> AddOrder(OrderAddRequest addRequest)
@@ -37,21 +40,15 @@ public class OrdersService : IOrdersService
         if (addRequest == null)
             throw new ArgumentNullException(nameof(addRequest));
 
-        ValidationResult validationResult = await _validatorOrderAddRequest.ValidateAsync(addRequest);
 
-        if (!validationResult.IsValid)
-        {
-            string errors = string.Join(", ", validationResult.Errors.Select(e => e.ErrorMessage));
-            throw new ArgumentException(errors);
-        }
+        var validationResult = await _ordersValidator.Validate(_validatorOrderAddRequest, addRequest);                        
+        if (!validationResult.Any())
+            throw new ArgumentException(string.Join(", ", validationResult));
 
-        var validationTasks = addRequest.OrderItems.Select(t => _validatorOrderItemAddRequest.ValidateAsync(t)).ToList();
-        var itemValidationResult = await Task.WhenAll(validationTasks);
-
-        var errorMessages = itemValidationResult.Where(r => !r.IsValid).SelectMany(r => r.Errors).Select(r => r.ErrorMessage).Distinct().ToList();
-
+      
+        var itemValidationResult = await _ordersValidator.Validate(_validatorOrderItemAddRequest, addRequest.OrderItems);
         if (itemValidationResult.Any())
-            throw new ArgumentException(string.Join(", ", errorMessages));
+            throw new ArgumentException(string.Join(", ", itemValidationResult));
 
 
         //Add logic for checking if user UserID exists in Users microservice
@@ -128,23 +125,16 @@ public class OrdersService : IOrdersService
         if (updateRequest == null)
             throw new ArgumentNullException(nameof(updateRequest));
 
-        ValidationResult validationResult = await _validatorOrderUpdateRequest.ValidateAsync(updateRequest);
 
-        if (!validationResult.IsValid)
-        {
-            string errors = string.Join(", ", validationResult.Errors.Select(e => e.ErrorMessage));
-            throw new ArgumentException(errors);
-        }
+        var validationResult = await _ordersValidator.Validate(_validatorOrderUpdateRequest, updateRequest);
+        if (!validationResult.Any())
+            throw new ArgumentException(string.Join(", ", validationResult));
 
-        var validationTasks = updateRequest.OrderItems.Select(t => _validatorOrderItemUpdateRequest.ValidateAsync(t)).ToList();
-        var itemValidationResult = await Task.WhenAll(validationTasks);
 
-        var errorMessages = itemValidationResult.Where(r => !r.IsValid).SelectMany(r => r.Errors).Select(r => r.ErrorMessage).Distinct().ToList();
-
+        var itemValidationResult = await _ordersValidator.Validate(_validatorOrderItemUpdateRequest, updateRequest.OrderItems);
         if (itemValidationResult.Any())
-            throw new ArgumentException(string.Join(", ", errorMessages));
-
-
+            throw new ArgumentException(string.Join(", ", itemValidationResult));
+      
         //Add logic for checking if user UserID exists in Users microservice
 
 
