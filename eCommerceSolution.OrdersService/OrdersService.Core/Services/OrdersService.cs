@@ -140,8 +140,7 @@ public class OrdersService : IOrdersService
 
 
 
-        Order orderUpdate = _mapper.Map<Order>(updateRequest);
-        orderUpdate.OrderID = Guid.NewGuid();
+        Order orderUpdate = _mapper.Map<Order>(updateRequest);        
 
         foreach (OrderItem orderItem in orderUpdate.OrderItems)
         {
@@ -150,7 +149,7 @@ public class OrdersService : IOrdersService
 
         orderUpdate.TotalBill = orderUpdate.OrderItems.Sum(s => s.TotalPrice);
 
-        Order? orderOutput = await _ordersRepository.AddOrder(orderUpdate);
+        Order? orderOutput = await _ordersRepository.UpdateOrder(orderUpdate);
 
         if (orderOutput == null)
             return null;

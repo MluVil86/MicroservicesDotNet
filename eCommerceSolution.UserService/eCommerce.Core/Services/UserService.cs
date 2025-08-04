@@ -3,6 +3,7 @@ using eCommerce.Core.DTO;
 using eCommerce.Core.Entities;
 using eCommerce.Core.RespositoryContracts;
 using eCommerce.Core.ServiceContracts;
+using Microsoft.Extensions.Configuration.UserSecrets;
 
 namespace eCommerce.Core.Services;
 
@@ -15,6 +16,19 @@ internal class UserService : IUserService
     {
         _userRepository = userRepository;
         _mapper = mapper;
+    }
+
+    public async Task<GetUserRequest?> GetByUserID(Guid userID)
+    {
+        if (userID == Guid.Empty)
+            return null;
+
+        ApplicationUser? user = await _userRepository.GetUserByUserID(userID);
+
+        if (user == null)
+            return null;
+
+        return _mapper.Map<GetUserRequest?>(user);
     }
 
     public async Task<AuthenticationResponse?> Login(LoginRequest loginRequest)

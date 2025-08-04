@@ -22,4 +22,6 @@ public interface IUserRepository
     /// <param name="password"></param>
     /// <returns></returns>
     Task<ApplicationUser?> GetUserByEmailAndPassword(string? email, string password);
+
+    Task<ApplicationUser?> GetUserByUserID(Guid userID);
 }

@@ -3,6 +3,7 @@ using eCommerce.Core.DTO;
 using eCommerce.Core.Entities;
 using eCommerce.Core.RespositoryContracts;
 using eCommerce.Infrastructure.DbContext;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace eCommerce.Infrastructure.Repositories;
 
@@ -38,5 +39,19 @@ internal class UserRepository : IUserRepository
         var parameters = new { Email = email, Password = password };
         ApplicationUser? user = await _dbContext.DbConnection.QueryFirstOrDefaultAsync<ApplicationUser>(query, parameters);
         return user;
+    }
+
+    public async Task<ApplicationUser?> GetUserByUserID(Guid userID)
+    {
+        if (userID == Guid.Empty)
+            return null;
+
+        var parameter = new { UserID = userID };
+        string query = "SELECT * FROM  public.\"Users\" WHERE \"UserID\" = '@userID'";
+
+        ApplicationUser? user = await _dbContext.DbConnection.QueryFirstAsync<ApplicationUser?>(query, parameter);
+
+        return user;
+
     }
 }

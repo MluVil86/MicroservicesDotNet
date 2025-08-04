@@ -139,7 +139,7 @@ namespace OrderService.API.Controllers
             bool deleteResponse = await _ordersService.DeleteOrder(orderId);
 
             if (!deleteResponse)
-                return Problem("Unexpected result");
+                return Problem("Unable to delete order");
 
             return Ok(deleteResponse);
         }

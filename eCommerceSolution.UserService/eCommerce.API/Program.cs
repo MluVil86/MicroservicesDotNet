@@ -39,7 +39,6 @@ options.AddDefaultPolicy(builder =>
     .AllowAnyHeader();
 }));
 
-
 var app = builder.Build();
 
 app.UseExceptionHandlingMiddleware();
