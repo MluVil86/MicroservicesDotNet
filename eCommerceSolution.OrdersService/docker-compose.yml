@@ -1,0 +1,30 @@
+services:
+  orderservice.api:
+    image: ${DOCKER_REGISTRY-}orderserviceapi
+    build:
+      context: .
+      dockerfile: OrdersService.API/Dockerfile
+    environment:
+     - MONGO_HOST=mongodb-container
+     - MONGO_PORT=27017
+     - MONGO_DATABASE=OrdersDatabase
+     - UsersMicroserviceURI=localhost
+     - UsersMicroservicePort=9090 
+    ports:
+     - "7000:8080"
+    networks:
+     - ecommerce-microservices-network
+
+  mongodb-container:
+    image: mongo:latest
+    ports: 
+     - "27017:27017"
+    volumes:
+     - /c/Users/mvilakazi/source/src/MicroservicesDotNet/eCommerce/mongo-init:/docker-entrypoint-initdb.d
+    networks:
+     - ecommerce-microservices-network
+        
+networks:
+ ecommerce-microservices-network:
+    driver: bridge      
+  
