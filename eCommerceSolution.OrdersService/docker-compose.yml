@@ -1,5 +1,73 @@
 services:
-  orderservice.api:
+ mongodb-container:
+    image: mongo:latest
+    ports: 
+     - "27017:27017"
+    volumes:
+     - /c/Users/mvilakazi/source/src/MicroservicesDotNet/eCommerce/mongo-init:/docker-entrypoint-initdb.d
+    networks:
+     - ecommerce-microservices-network
+
+ mysqldb:
+    image: mysql:8.4.3
+    environment:
+     MYSQL_ROOT_PASSWORD: ${mysql_pwd}
+    volumes:
+     - ./mysql-init:/docker-entrypoint-initdb.d
+     - /c/docker_local/mysql:/var/lib/mysql
+    command: --lower_case_table_names=1
+    networks:
+     - ecommerce-microservices-network
+    ports:
+     - "3306:3306"
+    hostname: mysql-host-productsmicroservice
+
+ postgresdb:
+   image: postgres:14.18
+   environment:
+    POSTGRES_PASSWORD: p@ssw0rd
+    POSTGRES_USER: admin
+    POSTGRES_DB: eCommerceUsers
+   volumes:
+    - ./postgres-init:/docker-entrypoint-initdb.d 
+    - /c/docker_local/psql:/var/lib/postgresql/data
+   networks:
+    - ecommerce-microservices-network
+   ports:
+    - "5432:5432"
+   hostname: mysql-host-productsmicroservice
+
+ users-microservice:
+  image: usersmicroservices:latest
+  environment:
+   - POSTGRES_HOST=postgresdb
+   - POSTGRES_PORT=5432
+   - POSTGRES_DATABASE=eCommerceUsers
+   - POSTGRES_USERNAME=admin
+   - POSTGRES_PASSWORD=p@ssw0rd  
+  ports:
+   - "7000:8080"
+  networks:
+   - ecommerce-microservice-network
+  depends_on:
+   - postgresdb
+
+ products-microservice:
+  image: productsmicroservices:1.2
+  environment:
+   - MYSQL_HOST=mysql-host-productsmicroservice
+   - MYSQL_DATABASE=ecommerceproductsdatabase
+   - MYSQL_PORT=3306 
+   - MYSQL_UID=root
+   - MYSQL_PASSWORD=p@ssw0rd   
+  ports:
+   - "8000:8080"
+  networks:
+   - ecommerce-microservice-network
+  depends_on:
+   - mysqldb
+
+ orderservice.api:
     image: ${DOCKER_REGISTRY-}orderserviceapi
     build:
       context: .
@@ -11,19 +79,12 @@ services:
      - UsersMicroserviceURI=localhost
      - UsersMicroservicePort=9090 
     ports:
-     - "7000:8080"
+     - "9000:8080"
     networks:
      - ecommerce-microservices-network
-
-  mongodb-container:
-    image: mongo:latest
-    ports: 
-     - "27017:27017"
-    volumes:
-     - /c/Users/mvilakazi/source/src/MicroservicesDotNet/eCommerce/mongo-init:/docker-entrypoint-initdb.d
-    networks:
-     - ecommerce-microservices-network
-        
+    depends_on:
+     - mongodb-container
+  
 networks:
  ecommerce-microservices-network:
     driver: bridge      
