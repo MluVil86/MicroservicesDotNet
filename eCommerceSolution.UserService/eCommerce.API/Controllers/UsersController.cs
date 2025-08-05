@@ -29,13 +29,4 @@ public class UsersController : ControllerBase
         return Ok(response);
     
     }
-
-    [HttpGet]
-    public IActionResult Get()
-    {
-        
-
-        return Ok("You're not crzy there is something wring");
-
-    }
 }

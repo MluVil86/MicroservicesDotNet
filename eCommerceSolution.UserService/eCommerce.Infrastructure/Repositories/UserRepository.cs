@@ -47,7 +47,7 @@ internal class UserRepository : IUserRepository
             return null;
 
         var parameter = new { UserID = userID };
-        string query = "SELECT * FROM  public.\"Users\" WHERE \"UserID\" = '@userID'";
+        string query = "SELECT * FROM  public.\"Users\" WHERE \"UserID\" = @userID";
 
         ApplicationUser? user = await _dbContext.DbConnection.QueryFirstAsync<ApplicationUser?>(query, parameter);
 

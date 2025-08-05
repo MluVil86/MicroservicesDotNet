@@ -7,10 +7,10 @@ namespace eCommerce.API.Controllers;
 
 [Route("api/[controller]")] // api/auth
 [ApiController]
-public class AuthControlle : ControllerBase
+public class AuthController : ControllerBase
 {
     private readonly IUserService _userService;
-    public AuthControlle(IUserService userService)
+    public AuthController(IUserService userService)
     {
         _userService = userService;
     }
@@ -46,5 +46,5 @@ public class AuthControlle : ControllerBase
             return Unauthorized(authenticationResponse);
 
         return Ok(authenticationResponse);           
-    } 
+    }  
 }

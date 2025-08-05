@@ -6,7 +6,7 @@
       "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "POSTGRES_HOST": "postgresdb",
+        "POSTGRES_HOST": "localhost",
         "POSTGRES_PORT": "5432",
         "POSTGRES_DATABASE": "eCommerceUsers",
         "POSTGRES_USERNAME": "admin",
@@ -21,7 +21,7 @@
       "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "POSTGRES_HOST": "postgresdb",
+        "POSTGRES_HOST": "localhost",
         "POSTGRES_PORT": "5432",
         "POSTGRES_DATABASE": "eCommerceUsers",
         "POSTGRES_USERNAME": "admin",
@@ -47,12 +47,27 @@
       "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "POSTGRES_HOST": "postgresdb",
+        "POSTGRES_HOST": "localhost",
         "POSTGRES_PORT": "5432",
         "POSTGRES_DATABASE": "eCommerceUsers",
         "POSTGRES_USERNAME": "admin",
         "POSTGRES_PASSWORD": "p@ssw0rd"
       }
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "launchBrowser": true,
+      "launchUrl": "https://localhost:7126/swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "https://localhost:7126",
+        "POSTGRES_DATABASE": "eCommerceUsers",
+        "POSTGRES_HOST": "postgresdb",
+        "POSTGRES_PASSWORD": "p@ssw0rd",
+        "POSTGRES_PORT": "5432",
+        "POSTGRES_USERNAME": "admin"
+      },
+      "distributionName": ""
     }
   },
   "$schema": "https://json.schemastore.org/launchsettings.json",
