@@ -3,6 +3,7 @@ using FluentValidation;
 using FluentValidation.Results;
 using MongoDB.Driver;
 using OrderService.BusinessLogicLayer.DTOs;
+using OrderService.BusinessLogicLayer.HttpClients;
 using OrderService.BusinessLogicLayer.ServiceContracts;
 using OrderService.DataAccessLayer.Entities;
 using OrderService.DataAccessLayer.RespositoryContracts;
@@ -18,12 +19,14 @@ public class OrdersService : IOrdersService
     private readonly IValidator<OrderItemUpdateRequest> _validatorOrderItemUpdateRequest;
     private readonly IValidator<OrderUpdateRequest> _validatorOrderUpdateRequest;
     private readonly IOrdersValidator _ordersValidator;
+    private UserMicroserviceClient _userMicroserviceClient;
     public OrdersService(IOrdersRepository ordersRepository, IMapper mapper, 
         IValidator<OrderAddRequest> validatorOrderAddRequest, 
         IValidator<OrderItemAddRequest> validatorOrderItemAddReques,
         IValidator<OrderItemUpdateRequest> validatorOrderItemUpdateRequest, 
         IValidator<OrderUpdateRequest> validatorOrderUpdateRequest,
-        IOrdersValidator ordersValidator
+        IOrdersValidator ordersValidator,
+        UserMicroserviceClient userMicroserviceClient
         )
     {
         _ordersRepository = ordersRepository;
@@ -33,6 +36,7 @@ public class OrdersService : IOrdersService
         _validatorOrderItemUpdateRequest = validatorOrderItemUpdateRequest;
         _validatorOrderUpdateRequest = validatorOrderUpdateRequest;
         _ordersValidator = ordersValidator;
+        _userMicroserviceClient = userMicroserviceClient;
     }
 
     public async Task<OrderResponse?> AddOrder(OrderAddRequest addRequest)
@@ -52,12 +56,14 @@ public class OrdersService : IOrdersService
 
 
         //Add logic for checking if user UserID exists in Users microservice
+        UserResponse? userResponse = await _userMicroserviceClient.GetUserByUserID(addRequest.UserID);
 
-
-
-
+        if (userResponse == null)
+            throw new ArgumentException("Invalid User ID");
+        
         Order orderInput = _mapper.Map<Order>(addRequest);
         orderInput.OrderID = Guid.NewGuid();
+        orderInput.UserID = userResponse.UserID;
         
         foreach (OrderItem orderItem in orderInput.OrderItems) 
         {
@@ -134,13 +140,15 @@ public class OrdersService : IOrdersService
         var itemValidationResult = await _ordersValidator.Validate(_validatorOrderItemUpdateRequest, updateRequest.OrderItems);
         if (itemValidationResult.Any())
             throw new ArgumentException(string.Join(", ", itemValidationResult));
-      
+
         //Add logic for checking if user UserID exists in Users microservice
+        UserResponse? userResponse = await _userMicroserviceClient.GetUserByUserID(updateRequest.UserID);
 
-
-
+        if (userResponse == null)
+            throw new ArgumentException("Invalid User ID");
 
         Order orderUpdate = _mapper.Map<Order>(updateRequest);        
+        orderUpdate.UserID = updateRequest.UserID;
 
         foreach (OrderItem orderItem in orderUpdate.OrderItems)
         {

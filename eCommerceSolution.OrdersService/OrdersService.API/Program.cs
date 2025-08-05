@@ -3,6 +3,7 @@ using OrderService.DataAccessLayer;
 using FluentValidation;
 using OrderService.BusinessLogicLayer.Validators;
 using OrderService.API.Middleware;
+using OrderService.BusinessLogicLayer.HttpClients;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +27,10 @@ builder.Services.AddCors(options =>
     });
 });
 
+builder.Services.AddHttpClient<UserMicroserviceClient>(client =>
+{
+    client.BaseAddress = new Uri($"http://{Environment.GetEnvironmentVariable("UsersMicroserviceURI")}:{Environment.GetEnvironmentVariable("UsersMicroservicePort")}");
+});
 var app = builder.Build();
 
 app.UseExceptionHandlingMiddleware();

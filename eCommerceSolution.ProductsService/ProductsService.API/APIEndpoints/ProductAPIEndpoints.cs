@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Http.HttpResults;
 using ProductsService.BusinessLogicLayer.DTO;
 using ProductsService.BusinessLogicLayer.ServiceContracts;
 using ProductsService.BusinessLogicLayer.Services;
@@ -23,6 +24,10 @@ public static class ProductAPIEndpoints
         app.MapGet("/api/products/search/productid/{ProductId:guid}", async (IProductService productService, Guid ProductId) =>
         {
             ProductResponse? products = await productService.GetProductByCondition(temp => temp.ProductID == ProductId);
+
+            if (products == null)
+                return Results.NotFound();
+
             return Results.Ok(products);
         });
 
