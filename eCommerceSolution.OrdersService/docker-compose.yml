@@ -1,23 +1,24 @@
 services:
- mongodb-container:
+ mongodb:
     image: mongo:latest
     ports: 
      - "27017:27017"
     volumes:
      - /c/Users/mvilakazi/source/src/MicroservicesDotNet/eCommerce/mongo-init:/docker-entrypoint-initdb.d
+     - /c/docker_local/mongo:/data/db
     networks:
-     - ecommerce-microservices-network
+     - orders-mongo-network
 
  mysqldb:
     image: mysql:8.4.3
     environment:
-     MYSQL_ROOT_PASSWORD: ${mysql_pwd}
+     MYSQL_ROOT_PASSWORD: p@ssw0rd
     volumes:
-     - ./mysql-init:/docker-entrypoint-initdb.d
+     - /c/Users/mvilakazi/source/src/MicroservicesDotNet/eCommerce/mysql-init:/docker-entrypoint-initdb.d
      - /c/docker_local/mysql:/var/lib/mysql
     command: --lower_case_table_names=1
     networks:
-     - ecommerce-microservices-network
+     - products-mysql-network
     ports:
      - "3306:3306"
     hostname: mysql-host-productsmicroservice
@@ -29,32 +30,37 @@ services:
     POSTGRES_USER: admin
     POSTGRES_DB: eCommerceUsers
    volumes:
-    - ./postgres-init:/docker-entrypoint-initdb.d 
+    - /c/Users/mvilakazi/source/src/MicroservicesDotNet/eCommerce/postgres-init:/docker-entrypoint-initdb.d 
     - /c/docker_local/psql:/var/lib/postgresql/data
    networks:
-    - ecommerce-microservices-network
+    - users-postgres-network
    ports:
     - "5432:5432"
    hostname: mysql-host-productsmicroservice
 
  users-microservice:
-  image: usersmicroservices:latest
+  image: usermicroservice:latest
   environment:
+   - ASPNETCORE_HTTP_PORTS=8080
+   - ASPNETCORE_ENVIRONMENT=Development
    - POSTGRES_HOST=postgresdb
    - POSTGRES_PORT=5432
    - POSTGRES_DATABASE=eCommerceUsers
    - POSTGRES_USERNAME=admin
    - POSTGRES_PASSWORD=p@ssw0rd  
   ports:
-   - "7000:8080"
+   - "7000:9090"
   networks:
    - ecommerce-microservice-network
+   - users-postgres-network
   depends_on:
    - postgresdb
 
  products-microservice:
-  image: productsmicroservices:1.2
+  image: productmicroservice:latest
   environment:
+   - ASPNETCORE_HTTP_PORTS=8080
+   - ASPNETCORE_ENVIRONMENT=Development
    - MYSQL_HOST=mysql-host-productsmicroservice
    - MYSQL_DATABASE=ecommerceproductsdatabase
    - MYSQL_PORT=3306 
@@ -64,6 +70,7 @@ services:
    - "8000:8080"
   networks:
    - ecommerce-microservice-network
+   - products-mysql-network
   depends_on:
    - mysqldb
 
@@ -73,19 +80,27 @@ services:
       context: .
       dockerfile: OrdersService.API/Dockerfile
     environment:
-     - MONGO_HOST=mongodb-container
+     - MONGO_HOST=mongodb
      - MONGO_PORT=27017
      - MONGO_DATABASE=OrdersDatabase
-     - UsersMicroserviceURI=localhost
+     - UsersMicroserviceURI=users-microservice
      - UsersMicroservicePort=9090 
     ports:
-     - "9000:8080"
+     - "6000:8080"
     networks:
-     - ecommerce-microservices-network
+     - ecommerce-microservice-network
+     - orders-mongo-network
     depends_on:
-     - mongodb-container
+     - mongodb
+     - users-microservice
   
 networks:
- ecommerce-microservices-network:
-    driver: bridge      
+ ecommerce-microservice-network:
+    driver: bridge 
+ products-mysql-network:
+    driver: bridge   
+ users-postgres-network:
+    driver: bridge  
+ orders-mongo-network:
+    driver: bridge 
   
