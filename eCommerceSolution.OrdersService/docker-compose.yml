@@ -85,6 +85,8 @@ services:
      - MONGO_DATABASE=OrdersDatabase
      - UsersMicroserviceURI=users-microservice
      - UsersMicroservicePort=9090 
+     - ProductsMicroserviceURI=products-microservice
+     - ProductsMicroservicePort=8080
     ports:
      - "6000:8080"
     networks:

@@ -20,13 +20,15 @@ public class OrdersService : IOrdersService
     private readonly IValidator<OrderUpdateRequest> _validatorOrderUpdateRequest;
     private readonly IOrdersValidator _ordersValidator;
     private UserMicroserviceClient _userMicroserviceClient;
+    private ProductMicroserviceClient _productMicroserviceClient;
     public OrdersService(IOrdersRepository ordersRepository, IMapper mapper, 
         IValidator<OrderAddRequest> validatorOrderAddRequest, 
         IValidator<OrderItemAddRequest> validatorOrderItemAddReques,
         IValidator<OrderItemUpdateRequest> validatorOrderItemUpdateRequest, 
         IValidator<OrderUpdateRequest> validatorOrderUpdateRequest,
         IOrdersValidator ordersValidator,
-        UserMicroserviceClient userMicroserviceClient
+        UserMicroserviceClient userMicroserviceClient,
+        ProductMicroserviceClient productMicroserviceClient
         )
     {
         _ordersRepository = ordersRepository;
@@ -37,6 +39,7 @@ public class OrdersService : IOrdersService
         _validatorOrderUpdateRequest = validatorOrderUpdateRequest;
         _ordersValidator = ordersValidator;
         _userMicroserviceClient = userMicroserviceClient;
+        _productMicroserviceClient = productMicroserviceClient;
     }
 
     public async Task<OrderResponse?> AddOrder(OrderAddRequest addRequest)
@@ -48,12 +51,10 @@ public class OrdersService : IOrdersService
         var validationResult = await _ordersValidator.Validate(_validatorOrderAddRequest, addRequest);                        
         if (!validationResult.Any())
             throw new ArgumentException(string.Join(", ", validationResult));
-
       
         var itemValidationResult = await _ordersValidator.Validate(_validatorOrderItemAddRequest, addRequest.OrderItems);
         if (itemValidationResult.Any())
             throw new ArgumentException(string.Join(", ", itemValidationResult));
-
 
         //Add logic for checking if user UserID exists in Users microservice
         UserResponse? userResponse = await _userMicroserviceClient.GetUserByUserID(addRequest.UserID);
@@ -67,6 +68,10 @@ public class OrdersService : IOrdersService
         
         foreach (OrderItem orderItem in orderInput.OrderItems) 
         {
+            //check if each product exists - this method will have a terrible impact on performance.  Will be fixed later
+            ProductResponse? productResponse = await _productMicroserviceClient.GetProductByProdcutID(orderItem.ProductID);
+            if (productResponse == null)
+                throw new ArgumentException("Invalid Product ID");
             orderItem.TotalPrice = orderItem.Quantity * orderItem.UnitPrice;        
         }
 
@@ -152,6 +157,11 @@ public class OrdersService : IOrdersService
 
         foreach (OrderItem orderItem in orderUpdate.OrderItems)
         {
+            //check if each product exists - this method will have a terrible impact on performance.  Will be fixed later
+            ProductResponse? productResponse = await _productMicroserviceClient.GetProductByProdcutID(orderItem.ProductID);
+            if (productResponse == null)
+                throw new ArgumentException("Invalid Product ID");
+
             orderItem.TotalPrice = orderItem.Quantity * orderItem.UnitPrice;
         }
 
