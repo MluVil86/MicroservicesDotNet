@@ -12,7 +12,9 @@ public class OrderItemToOrderItemResponseMappingProfile: Profile
             .ForMember(dest => dest.ProductID, opt => opt.MapFrom(dest => dest.ProductID))
             .ForMember(dest => dest.UnitPrice, opt => opt.MapFrom(dest => dest.UnitPrice))
             .ForMember(dest => dest.Quantity, opt => opt.MapFrom(dest => dest.Quantity))
-            .ForMember(dest => dest.TotalPrice, opt => opt.MapFrom(dest => dest.TotalPrice));
+            .ForMember(dest => dest.TotalPrice, opt => opt.MapFrom(dest => dest.TotalPrice))
+            .ForMember(dest => dest.ProductName, opt => opt.Ignore())
+            .ForMember(dest => dest.Category, opt => opt.Ignore());
     }
 }
 

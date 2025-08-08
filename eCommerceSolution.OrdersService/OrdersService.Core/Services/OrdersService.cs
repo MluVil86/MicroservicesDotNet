@@ -65,13 +65,15 @@ public class OrdersService : IOrdersService
         Order orderInput = _mapper.Map<Order>(addRequest);
         orderInput.OrderID = Guid.NewGuid();
         orderInput.UserID = userResponse.UserID;
-        
+        List<ProductResponse> productList = new();
         foreach (OrderItem orderItem in orderInput.OrderItems) 
         {
             //check if each product exists - this method will have a terrible impact on performance.  Will be fixed later
             ProductResponse? productResponse = await _productMicroserviceClient.GetProductByProdcutID(orderItem.ProductID);
             if (productResponse == null)
                 throw new ArgumentException("Invalid Product ID");
+            productList.Add(productResponse);
+
             orderItem.TotalPrice = orderItem.Quantity * orderItem.UnitPrice;        
         }
 
@@ -82,7 +84,22 @@ public class OrdersService : IOrdersService
         if (orderOutput == null)
             return null;
 
-        return _mapper.Map<OrderResponse>(orderOutput);
+        OrderResponse? orderResponse = _mapper.Map<OrderResponse>(orderOutput);
+
+        foreach (OrderItemResponse? orderItemResponses in orderResponse.OrderItems)
+        {
+            if (orderItemResponses == null)
+                continue;
+
+            ProductResponse? productResponse = productList.FirstOrDefault(prod => prod.ProductID == orderItemResponses.ProductID);
+
+            if (productResponse == null)
+                continue;
+
+            _mapper.Map<ProductResponse, OrderItemResponse>(productResponse, orderItemResponses);
+        }
+
+        return orderResponse;
     }
 
     public async Task<bool> DeleteOrder(Guid orderID)
@@ -104,7 +121,22 @@ public class OrdersService : IOrdersService
         if (order == null) 
             return null;
 
-        return _mapper.Map<OrderResponse>(order);
+        OrderResponse? orderResponse = _mapper.Map<OrderResponse>(order);
+
+        foreach (OrderItemResponse? orderItemResponses in orderResponse.OrderItems)
+        {
+            if (orderItemResponses == null)
+                continue;
+
+            ProductResponse? productResponse = await _productMicroserviceClient.GetProductByProdcutID(orderItemResponses.ProductID);
+
+            if (productResponse == null)
+                continue;
+
+            _mapper.Map<ProductResponse, OrderItemResponse>(productResponse, orderItemResponses);            
+        }
+
+        return orderResponse;
     }
 
     public async Task<List<OrderResponse>?> GetOrders()
@@ -115,6 +147,23 @@ public class OrdersService : IOrdersService
             return null;
 
         IEnumerable<OrderResponse> orderResponses = _mapper.Map<IEnumerable<OrderResponse>>(orders);
+
+        foreach (OrderResponse? orderResponse in orderResponses)
+        {
+            if (orderResponse == null)
+                continue;
+
+            foreach (OrderItemResponse orderItemResponse in orderResponse.OrderItems)
+            {
+                ProductResponse? productResponse = await _productMicroserviceClient.GetProductByProdcutID(orderItemResponse.ProductID);
+
+                if (productResponse == null)
+                    continue;
+
+                _mapper.Map<ProductResponse, OrderItemResponse>(productResponse, orderItemResponse);
+            }
+
+        }
 
         return orderResponses.ToList();
     }
@@ -127,6 +176,23 @@ public class OrdersService : IOrdersService
             return null;
 
         IEnumerable<OrderResponse> orderResponses = _mapper.Map<List<OrderResponse>>(orders);
+
+        foreach (OrderResponse? orderResponse in orderResponses)
+        {
+            if (orderResponse == null)
+                continue;
+
+            foreach (OrderItemResponse orderItemResponse in orderResponse.OrderItems)
+            {
+                ProductResponse? productResponse = await _productMicroserviceClient.GetProductByProdcutID(orderItemResponse.ProductID);
+
+                if (productResponse == null)
+                    continue;
+
+                _mapper.Map<ProductResponse, OrderItemResponse>(productResponse, orderItemResponse);
+            }
+
+        }
 
         return orderResponses.ToList();
     }
@@ -154,14 +220,17 @@ public class OrdersService : IOrdersService
 
         Order orderUpdate = _mapper.Map<Order>(updateRequest);        
         orderUpdate.UserID = updateRequest.UserID;
+        List<ProductResponse> productList = new();
 
         foreach (OrderItem orderItem in orderUpdate.OrderItems)
         {
             //check if each product exists - this method will have a terrible impact on performance.  Will be fixed later
             ProductResponse? productResponse = await _productMicroserviceClient.GetProductByProdcutID(orderItem.ProductID);
+            
             if (productResponse == null)
                 throw new ArgumentException("Invalid Product ID");
 
+            productList.Add(productResponse);
             orderItem.TotalPrice = orderItem.Quantity * orderItem.UnitPrice;
         }
 
@@ -172,6 +241,21 @@ public class OrdersService : IOrdersService
         if (orderOutput == null)
             return null;
 
-        return _mapper.Map<OrderResponse>(orderOutput);
+        OrderResponse? orderResponse = _mapper.Map<OrderResponse>(orderOutput);
+
+        foreach (OrderItemResponse? orderItemResponses in orderResponse.OrderItems)
+        {
+            if (orderItemResponses == null)
+                continue;
+
+            ProductResponse? productResponse = productList.FirstOrDefault(prod => prod.ProductID == orderItemResponses.ProductID);
+
+            if (productResponse == null)
+                continue;
+
+            _mapper.Map<ProductResponse, OrderItemResponse>(productResponse, orderItemResponses);
+        }
+
+        return orderResponse;
     }
 }
