@@ -99,6 +99,8 @@ public class OrdersService : IOrdersService
             _mapper.Map<ProductResponse, OrderItemResponse>(productResponse, orderItemResponses);
         }
 
+        _mapper.Map<UserResponse, OrderResponse>(userResponse, orderResponse);
+
         return orderResponse;
     }
 
@@ -136,6 +138,12 @@ public class OrdersService : IOrdersService
             _mapper.Map<ProductResponse, OrderItemResponse>(productResponse, orderItemResponses);            
         }
 
+        UserResponse? userResponse = await _userMicroserviceClient.GetUserByUserID(orderResponse.UserID);
+        if (userResponse == null)
+            throw new Exception("Invalid user ID");
+
+        _mapper.Map<UserResponse, OrderResponse>(userResponse, orderResponse);
+
         return orderResponse;
     }
 
@@ -152,6 +160,12 @@ public class OrdersService : IOrdersService
         {
             if (orderResponse == null)
                 continue;
+
+            UserResponse? userResponse = await _userMicroserviceClient.GetUserByUserID(orderResponse.UserID);
+            if (userResponse == null)
+                continue;
+
+            _mapper.Map<UserResponse, OrderResponse>(userResponse, orderResponse);
 
             foreach (OrderItemResponse orderItemResponse in orderResponse.OrderItems)
             {
@@ -181,6 +195,12 @@ public class OrdersService : IOrdersService
         {
             if (orderResponse == null)
                 continue;
+
+            UserResponse? userResponse = await _userMicroserviceClient.GetUserByUserID(orderResponse.UserID);
+            if (userResponse == null)
+                continue;
+
+            _mapper.Map<UserResponse, OrderResponse>(userResponse, orderResponse);
 
             foreach (OrderItemResponse orderItemResponse in orderResponse.OrderItems)
             {
@@ -255,6 +275,8 @@ public class OrdersService : IOrdersService
 
             _mapper.Map<ProductResponse, OrderItemResponse>(productResponse, orderItemResponses);
         }
+
+        _mapper.Map<UserResponse, OrderResponse>(userResponse, orderResponse);
 
         return orderResponse;
     }

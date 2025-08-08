@@ -13,6 +13,8 @@ public class OrderToOrderResponseMappingProfile: Profile
             .ForMember(dest => dest.UserID, opt => opt.MapFrom(dest => dest.UserID))
             .ForMember(dest => dest.OrderDate, opt => opt.MapFrom(dest => dest.OrderDate))
             .ForMember(dest => dest.OrderItems, opt => opt.MapFrom(dest => dest.OrderItems))                                                                                   
-            .ForMember(dest => dest.TotalBill, opt => opt.MapFrom(dest=> dest.TotalBill));
+            .ForMember(dest => dest.TotalBill, opt => opt.MapFrom(dest=> dest.TotalBill))
+            .ForMember(dest => dest.Email, opt => opt.Ignore())
+            .ForMember(dest => dest.UserPersonName, opt => opt.Ignore());
     }
 }
