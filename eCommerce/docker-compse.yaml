@@ -8,25 +8,10 @@ services:
    - /c/docker_local/mysql:/var/lib/mysql
   command: --lower_case_table_names=1
   networks:
-   - ecommerce-microservice-network
+   - products-mysql-network
   ports:
-   - "3306:3306"
+   - "3308:3306"
   hostname: mysql-host-productsmicroservice
-
- products-microservice:
-  image: productsmicroservices:1.2
-  environment:
-   MYSQL_HOST: ${mysql_host}
-   MYSQL_DATABASE: ${mysql_db}
-   MYSQL_PORT: ${mysql_port}  
-   MYSQL_UID: ${mysql_user}
-   MYSQL_PASSWORD: ${mysql_pwd}   
-  ports:
-   - "8080:8080"
-  networks:
-   - ecommerce-microservice-network
-  depends_on:
-   - mysqldb
 
  postgresdb:
   image: postgres:14.18
@@ -38,13 +23,39 @@ services:
    - ./postgres-init:/docker-entrypoint-initdb.d 
    - /c/docker_local/psql:/var/lib/postgresql/data
   networks:
-   - ecommerce-microservice-network
+   - users-postgres-network
   ports:
    - "5432:5432"
   hostname: mysql-host-productsmicroservice
 
+ mongodb:
+   image: mongo:latest
+   ports: 
+    - "27017:27017"
+   volumes:
+    - /c/Users/mlung/src/MicroservicesDotNet/eCommerce/mongo-init:/docker-entrypoint-initdb.d
+    - /c/docker_local/mongo:/data/db
+   networks:
+    - orders-mongo-network
+
+ products-microservice:
+  image: productmicroservice:latest
+  environment:
+   MYSQL_HOST: ${mysql_host}
+   MYSQL_DATABASE: ${mysql_db}
+   MYSQL_PORT: ${mysql_port}  
+   MYSQL_UID: ${mysql_user}
+   MYSQL_PASSWORD: ${mysql_pwd}   
+  ports:
+   - "5000:8080"
+  networks:
+   - ecommerce-microservice-network
+   - products-mysql-network
+  depends_on:
+   - mysqldb
+ 
  users-microservice:
-  image: usersmicroservices:1.2
+  image: usermicroservice:latest
   environment:
    POSTGRES_HOST: ${pg_host}
    POSTGRES_PORT: ${pg_port}
@@ -52,12 +63,37 @@ services:
    POSTGRES_USERNAME: ${pg_user}
    POSTGRES_PASSWORD: ${pg_pwd}  
   ports:
-   - "9090:9090"
+   - "6000:8080"
   networks:
    - ecommerce-microservice-network
+   - users-postgres-network
+  depends_on:
+   - postgresdb
+
+ orders-microservice:
+  image: ordermicroservice:latest
+  environment:
+   MONGO_HOST: ${pg_host}
+   MONGO_PORT: ${pg_port}
+   MONGO_DATABASE: ${pg_db}
+   UsersMicroserviceURI: ${users_uri}
+   UsersMicroservicePort: ${users_port}  
+   ProductsMicroserviceURI: ${prod_uri}  
+   ProductsMicroservicePort: ${prod_port}  
+  ports:
+   - "7000:8080"
+  networks:
+   - ecommerce-microservice-network
+   - orders-mongo-network
   depends_on:
    - postgresdb
 
 networks:
  ecommerce-microservice-network:
   driver: bridge
+ products-mysql-network:
+   driver: bridge   
+ users-postgres-network:
+   driver: bridge  
+ orders-mongo-network:
+   driver: bridge 

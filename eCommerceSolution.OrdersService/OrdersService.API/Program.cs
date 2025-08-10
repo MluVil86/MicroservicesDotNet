@@ -1,9 +1,11 @@
-using OrderService.BusinessLogicLayer;
-using OrderService.DataAccessLayer;
 using FluentValidation;
-using OrderService.BusinessLogicLayer.Validators;
 using OrderService.API.Middleware;
+using OrderService.BusinessLogicLayer;
 using OrderService.BusinessLogicLayer.HttpClients;
+using OrderService.BusinessLogicLayer.Policies;
+using OrderService.BusinessLogicLayer.Validators;
+using OrderService.DataAccessLayer;
+using Polly;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,10 +29,15 @@ builder.Services.AddCors(options =>
     });
 });
 
+builder.Services.AddTransient<IUsersMicroservicePolicies, UsersMicroservicePolicies>();
+
 builder.Services.AddHttpClient<UserMicroserviceClient>(client =>
 {
     client.BaseAddress = new Uri($"http://{Environment.GetEnvironmentVariable("UsersMicroserviceURI")}:{Environment.GetEnvironmentVariable("UsersMicroservicePort")}");
-});
+}).AddPolicyHandler
+(
+    builder.Services.BuildServiceProvider().GetRequiredService<IUsersMicroservicePolicies>().GetRetryPolicy()
+);
 
 builder.Services.AddHttpClient<ProductMicroserviceClient>(client =>
 {
@@ -48,7 +55,7 @@ app.UseCors();
 app.UseSwagger();
 app.UseSwaggerUI();
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 

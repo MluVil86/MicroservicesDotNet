@@ -4,7 +4,7 @@ services:
     ports: 
      - "27017:27017"
     volumes:
-     - /c/Users/mvilakazi/source/src/MicroservicesDotNet/eCommerce/mongo-init:/docker-entrypoint-initdb.d
+     - /c/Users/mlung/src/MicroservicesDotNet/eCommerce/mongo-init:/docker-entrypoint-initdb.d
      - /c/docker_local/mongo:/data/db
     networks:
      - orders-mongo-network
@@ -14,13 +14,13 @@ services:
     environment:
      MYSQL_ROOT_PASSWORD: p@ssw0rd
     volumes:
-     - /c/Users/mvilakazi/source/src/MicroservicesDotNet/eCommerce/mysql-init:/docker-entrypoint-initdb.d
+     - /c/Users/mlung/src/MicroservicesDotNet/eCommerce/mysql-init:/docker-entrypoint-initdb.d
      - /c/docker_local/mysql:/var/lib/mysql
     command: --lower_case_table_names=1
     networks:
      - products-mysql-network
     ports:
-     - "3306:3306"
+     - "3307:3306"
     hostname: mysql-host-productsmicroservice
 
  postgresdb:
@@ -30,7 +30,7 @@ services:
     POSTGRES_USER: admin
     POSTGRES_DB: eCommerceUsers
    volumes:
-    - /c/Users/mvilakazi/source/src/MicroservicesDotNet/eCommerce/postgres-init:/docker-entrypoint-initdb.d 
+    - /c/Users/mlung/src/MicroservicesDotNet/eCommerce/postgres-init:/docker-entrypoint-initdb.d 
     - /c/docker_local/psql:/var/lib/postgresql/data
    networks:
     - users-postgres-network
@@ -88,7 +88,7 @@ services:
      - ProductsMicroserviceURI=products-microservice
      - ProductsMicroservicePort=8080
     ports:
-     - "6000:8080"
+     - "4000:8080"
     networks:
      - ecommerce-microservice-network
      - orders-mongo-network
