@@ -4,7 +4,7 @@ services:
     ports: 
      - "27017:27017"
     volumes:
-     - /c/Users/mlung/src/MicroservicesDotNet/eCommerce/mongo-init:/docker-entrypoint-initdb.d
+     - /c/docker_local/scripts/mongo/mongo-init:/docker-entrypoint-initdb.d
      - /c/docker_local/mongo:/data/db
     networks:
      - orders-mongo-network
@@ -14,7 +14,7 @@ services:
     environment:
      MYSQL_ROOT_PASSWORD: p@ssw0rd
     volumes:
-     - /c/Users/mlung/src/MicroservicesDotNet/eCommerce/mysql-init:/docker-entrypoint-initdb.d
+     - /c/docker_local/scripts/mysql/mysql-init:/docker-entrypoint-initdb.d
      - /c/docker_local/mysql:/var/lib/mysql
     command: --lower_case_table_names=1
     networks:
@@ -30,7 +30,7 @@ services:
     POSTGRES_USER: admin
     POSTGRES_DB: eCommerceUsers
    volumes:
-    - /c/Users/mlung/src/MicroservicesDotNet/eCommerce/postgres-init:/docker-entrypoint-initdb.d 
+    - /c/docker_local/scripts/psql/postgres-init:/docker-entrypoint-initdb.d 
     - /c/docker_local/psql:/var/lib/postgresql/data
    networks:
     - users-postgres-network

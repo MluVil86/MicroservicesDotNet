@@ -32,7 +32,11 @@ public class UserMicroserviceClient
                 throw new HttpRequestException("Bad request", null, HttpStatusCode.BadRequest);
             else
             {
-                throw new HttpRequestException("Http request failed with status code", null, responseMessage.StatusCode);
+
+                //throw new HttpRequestException("Http request failed with status code", null, responseMessage.StatusCode);
+                //Instead of throwing an error, save dummy data
+
+                return new UserResponse(UserID: Guid.Empty, PersonName: "Temporarily Unavailable", Email: "Temporarily Unavailable", Gender: "Temporarily Unavailable");
             }
         }
         
