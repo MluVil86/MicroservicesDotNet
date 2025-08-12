@@ -7,6 +7,7 @@ using AutoMapper;
 using OrderService.BusinessLogicLayer.ServiceContracts;
 using OrderService.BusinessLogicLayer.Services;
 using OrderService.BusinessLogicLayer.Policies;
+using OrderService.BusinessLogicLayer.PolicyContracts;
 
 
 namespace OrderService.BusinessLogicLayer;
@@ -18,6 +19,7 @@ public static class DependencyInjection
         services.AddAutoMapper(typeof(OrderToOrderResponseMappingProfile).Assembly);
         services.AddScoped<IOrdersService, OrdersService>();
         services.AddScoped<IOrdersValidator, OrdersValidator>();
+        services.AddTransient<IPollyPolicies, PollyPolicies>();
         
         return services;
     }

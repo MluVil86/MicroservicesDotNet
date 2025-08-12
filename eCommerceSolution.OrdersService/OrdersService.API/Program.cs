@@ -38,13 +38,7 @@ builder.Services.AddHttpClient<UserMicroserviceClient>(client =>
     client.BaseAddress = new Uri($"http://{Environment.GetEnvironmentVariable("UsersMicroserviceURI")}:{Environment.GetEnvironmentVariable("UsersMicroservicePort")}");
 }).AddPolicyHandler
 (
-    builder.Services.BuildServiceProvider().GetRequiredService<IUsersMicroservicePolicies>().GetRetryPolicy()
-).AddPolicyHandler
-(
-    builder.Services.BuildServiceProvider().GetRequiredService<IUsersMicroservicePolicies>().GetCircuitBreakerPolicy()
-).AddPolicyHandler
-(
-    builder.Services.BuildServiceProvider().GetRequiredService<IUsersMicroservicePolicies>().GetTimeoutPolicy()
+    builder.Services.BuildServiceProvider().GetRequiredService<IUsersMicroservicePolicies>().GetCombinedPolicy()
 );
 
 builder.Services.AddHttpClient<ProductMicroserviceClient>(client =>

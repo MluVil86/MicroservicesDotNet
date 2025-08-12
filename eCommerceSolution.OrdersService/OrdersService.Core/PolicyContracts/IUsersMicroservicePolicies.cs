@@ -8,9 +8,6 @@ using System.Threading.Tasks;
 namespace OrderService.BusinessLogicLayer.PolicyContracts;
 
 public interface IUsersMicroservicePolicies
-{
-    IAsyncPolicy<HttpResponseMessage> GetRetryPolicy();
-    IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy();
-    IAsyncPolicy<HttpResponseMessage> GetTimeoutPolicy();
+{ 
     IAsyncPolicy<HttpResponseMessage> GetCombinedPolicy();
 }
