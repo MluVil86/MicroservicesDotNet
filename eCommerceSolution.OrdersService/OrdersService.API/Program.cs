@@ -3,6 +3,7 @@ using OrderService.API.Middleware;
 using OrderService.BusinessLogicLayer;
 using OrderService.BusinessLogicLayer.HttpClients;
 using OrderService.BusinessLogicLayer.Policies;
+using OrderService.BusinessLogicLayer.PolicyContracts;
 using OrderService.BusinessLogicLayer.Validators;
 using OrderService.DataAccessLayer;
 using Polly;
@@ -30,6 +31,7 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddTransient<IUsersMicroservicePolicies, UsersMicroservicePolicies>();
+builder.Services.AddTransient<IProductsMicroservicePolicies, ProductsMicroservicePolicies>();
 
 builder.Services.AddHttpClient<UserMicroserviceClient>(client =>
 {
@@ -37,12 +39,24 @@ builder.Services.AddHttpClient<UserMicroserviceClient>(client =>
 }).AddPolicyHandler
 (
     builder.Services.BuildServiceProvider().GetRequiredService<IUsersMicroservicePolicies>().GetRetryPolicy()
+).AddPolicyHandler
+(
+    builder.Services.BuildServiceProvider().GetRequiredService<IUsersMicroservicePolicies>().GetCircuitBreakerPolicy()
+).AddPolicyHandler
+(
+    builder.Services.BuildServiceProvider().GetRequiredService<IUsersMicroservicePolicies>().GetTimeoutPolicy()
 );
 
 builder.Services.AddHttpClient<ProductMicroserviceClient>(client =>
 {
     client.BaseAddress = new Uri($"http://{Environment.GetEnvironmentVariable("ProductsMicroserviceURI")}:{Environment.GetEnvironmentVariable("ProductsMicroservicePort")}");
-});
+}).AddPolicyHandler
+(
+    builder.Services.BuildServiceProvider().GetRequiredService<IProductsMicroservicePolicies>().GetFallbackPolicy()
+).AddPolicyHandler
+(
+    builder.Services.BuildServiceProvider().GetRequiredService<IProductsMicroservicePolicies>().GetBulkheadIsolationPolicy()
+);
 
 var app = builder.Build();
 
