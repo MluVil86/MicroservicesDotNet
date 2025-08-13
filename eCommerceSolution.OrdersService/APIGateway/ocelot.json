@@ -12,7 +12,23 @@
       "UpstreamHttpMethod": [
         "Get"
       ],
-      "UpstreamScheme": "http"
+      "UpstreamScheme": "http",
+      "QoSOptions": {   //Polly policy configuration
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000, //10 seconds
+        "TimeoutValue": 5000 //5 seconds
+      },
+      "RetryOptions": {
+        "RetryCount": 3,
+        "RetryOnServerError": true
+      },
+      "RateLimitOptions": {
+        "Limit": 3,
+        "Period": "30s",  //h for hours, m for minutes, ms for milliseconfs
+        "HttpStatusCode": 429,
+        "EnableRateLimiting": true,
+        "PeriodTimespan": 30  //default is in seconds
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/Orders/search/orderid/{orderID}",
@@ -26,7 +42,16 @@
       "UpstreamHttpMethod": [
         "Get"
       ],
-      "UpstreamScheme": "http"
+      "UpstreamScheme": "http",
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000, //10 seconds
+        "TimeoutValue": 5000 //5 seconds
+      },
+      "RetryOptions": {
+        "RetryCount": 3,
+        "RetryOnServerError": true
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/Orders/search/productid/{productID}",
@@ -40,7 +65,16 @@
       "UpstreamHttpMethod": [
         "Get"
       ],
-      "UpstreamScheme": "http"
+      "UpstreamScheme": "http",
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000, //10 seconds
+        "TimeoutValue": 5000 //5 seconds
+      },
+      "RetryOptions": {
+        "RetryCount": 3,
+        "RetryOnServerError": true
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/Orders/search/orderDate/{orderDate}",
@@ -54,7 +88,16 @@
       "UpstreamHttpMethod": [
         "Get"
       ],
-      "UpstreamScheme": "http"
+      "UpstreamScheme": "http",
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000, //10 seconds
+        "TimeoutValue": 5000 //5 seconds
+      },
+      "RetryOptions": {
+        "RetryCount": 3,
+        "RetryOnServerError": true
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/Orders/search/userId/{userId}",
@@ -68,7 +111,16 @@
       "UpstreamHttpMethod": [
         "Get"
       ],
-      "UpstreamScheme": "http"
+      "UpstreamScheme": "http",
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000, //10 seconds
+        "TimeoutValue": 5000 //5 seconds
+      },
+      "RetryOptions": {
+        "RetryCount": 3,
+        "RetryOnServerError": true
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/Orders/{orderID}",
@@ -84,7 +136,16 @@
         "Delete",
         "Options"
       ],
-      "UpstreamScheme": "http"
+      "UpstreamScheme": "http",
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000, //10 seconds
+        "TimeoutValue": 5000 //5 seconds
+      },
+      "RetryOptions": {
+        "RetryCount": 3,
+        "RetryOnServerError": true
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/Products",
@@ -101,7 +162,16 @@
         "Put",
         "Options"
       ],
-      "UpstreamScheme": "http"
+      "UpstreamScheme": "http",
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000, //10 seconds
+        "TimeoutValue": 5000 //5 seconds
+      },
+      "RetryOptions": {
+        "RetryCount": 3,
+        "RetryOnServerError": true
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/Products/delete/{ProductId}",
@@ -116,7 +186,16 @@
         "Get",
         "Options"
       ],
-      "UpstreamScheme": "http"
+      "UpstreamScheme": "http",
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000, //10 seconds
+        "TimeoutValue": 5000 //5 seconds
+      },
+      "RetryOptions": {
+        "RetryCount": 3,
+        "RetryOnServerError": true
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/Products/update",
@@ -131,7 +210,16 @@
         "Put",
         "Options"
       ],
-      "UpstreamScheme": "http"
+      "UpstreamScheme": "http",
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000, //10 seconds
+        "TimeoutValue": 5000 //5 seconds
+      },
+      "RetryOptions": {
+        "RetryCount": 3,
+        "RetryOnServerError": true
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/products/add",
@@ -146,7 +234,16 @@
         "Post",
         "Options"
       ],
-      "UpstreamScheme": "http"
+      "UpstreamScheme": "http",
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000, //10 seconds
+        "TimeoutValue": 5000 //5 seconds
+      },
+      "RetryOptions": {
+        "RetryCount": 3,
+        "RetryOnServerError": true
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/products/search/{SearchString}",
@@ -160,7 +257,16 @@
       "UpstreamHttpMethod": [
         "Get"
       ],
-      "UpstreamScheme": "http"
+      "UpstreamScheme": "http",
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000, //10 seconds
+        "TimeoutValue": 5000 //5 seconds
+      },
+      "RetryOptions": {
+        "RetryCount": 3,
+        "RetryOnServerError": true
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/products/search/productid/{ProductId}",
@@ -174,7 +280,16 @@
       "UpstreamHttpMethod": [
         "Get"
       ],
-      "UpstreamScheme": "http"
+      "UpstreamScheme": "http",
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000, //10 seconds
+        "TimeoutValue": 5000 //5 seconds
+      },
+      "RetryOptions": {
+        "RetryCount": 3,
+        "RetryOnServerError": true
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/auth/register",
@@ -189,7 +304,16 @@
         "Post",
         "Options"
       ],
-      "UpstreamScheme": "http"
+      "UpstreamScheme": "http",
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000, //10 seconds
+        "TimeoutValue": 5000 //5 seconds
+      },
+      "RetryOptions": {
+        "RetryCount": 3,
+        "RetryOnServerError": true
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/auth/login",
@@ -204,7 +328,16 @@
         "Post",
         "Options"
       ],
-      "UpstreamScheme": "http"
+      "UpstreamScheme": "http",
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000, //10 seconds
+        "TimeoutValue": 5000 //5 seconds
+      },
+      "RetryOptions": {
+        "RetryCount": 3,
+        "RetryOnServerError": true
+      }
     },
     {
       "UpstreamPathTemplate": "/gateway/users/{userID}",
@@ -218,7 +351,16 @@
       "UpstreamHttpMethod": [
         "Get"
       ],
-      "UpstreamScheme": "http"
+      "UpstreamScheme": "http",
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000, //10 seconds
+        "TimeoutValue": 5000 //5 seconds
+      },
+      "RetryOptions": {
+        "RetryCount": 3,
+        "RetryOnServerError": true
+      }
     }
   ],
 
