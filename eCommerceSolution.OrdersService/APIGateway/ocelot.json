@@ -1,0 +1,28 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/gateway/Orders",
+      "DownstreamPathTemplate": "/api/Orders",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orderservice.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamHttpMethod": [
+        "Get",
+        "Post",
+        "Options"
+      ],
+      "UpstreamScheme": "http"
+
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl":  "http://localhost:2000"
+
+  }
+}
+
+
+/*http://localhost:2000/gatewat/Orders will forward request to http://orderservice.api:8080/api/Orders */

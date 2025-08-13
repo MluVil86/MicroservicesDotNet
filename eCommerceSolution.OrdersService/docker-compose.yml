@@ -107,6 +107,15 @@ services:
    networks:
    - ecommerce-microservice-network
 
+ apigateway:
+  image: apigateway
+  build:
+   context: .
+   dockerfile: /ApiGateway/Dockerfile
+  ports:
+   - "2000:8080"
+
+
 networks:
  ecommerce-microservice-network:
     driver: bridge 
