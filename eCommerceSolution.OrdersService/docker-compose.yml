@@ -87,6 +87,8 @@ services:
      - UsersMicroservicePort=9090 
      - ProductsMicroserviceURI=products-microservice
      - ProductsMicroservicePort=8080
+     - REDIS_HOST=redis-cache
+     - REDIS_PORT=6379 
     ports:
      - "4000:8080"
     networks:
@@ -95,7 +97,16 @@ services:
     depends_on:
      - mongodb
      - users-microservice
-  
+ 
+ redis-cache:
+   image: redis:8.2.0
+   ports:
+    - "6379:6379"
+   volumes:
+   - /c/docker_local/redis:/data
+   networks:
+   - ecommerce-microservice-network
+
 networks:
  ecommerce-microservice-network:
     driver: bridge 

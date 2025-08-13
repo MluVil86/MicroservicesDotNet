@@ -23,10 +23,7 @@ public class UsersMicroservicePolicies : IUsersMicroservicePolicies
         _logger = logger;
         _pollyPolicies = pollyPolicies;
     }
-
-
    
-
     public IAsyncPolicy<HttpResponseMessage> GetCombinedPolicy()
     {
         var retryPolicy = _pollyPolicies.GetRetryPolicy(5);

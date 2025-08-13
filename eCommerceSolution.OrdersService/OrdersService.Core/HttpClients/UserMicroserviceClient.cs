@@ -9,6 +9,8 @@ using System.Net.Http.Json;
 using Polly.CircuitBreaker;
 using Microsoft.Extensions.Logging;
 using Polly.Timeout;
+using Microsoft.Extensions.Caching.Distributed;
+using System.Text.Json;
 
 namespace OrderService.BusinessLogicLayer.HttpClients;
 
@@ -16,10 +18,12 @@ public class UserMicroserviceClient
 {
     private readonly HttpClient _httpClient;
     private readonly ILogger<UserMicroserviceClient> _logger;
-    public UserMicroserviceClient(HttpClient httpClient, ILogger<UserMicroserviceClient> logger)
+    private readonly IDistributedCache _distributedCache;
+    public UserMicroserviceClient(HttpClient httpClient, ILogger<UserMicroserviceClient> logger, IDistributedCache distributedCache)
     {
         _logger = logger;
         _httpClient = httpClient;
+        _distributedCache = distributedCache;
     }
 
     public async Task<UserResponse?> GetUserByUserID(Guid UserID)
@@ -29,12 +33,23 @@ public class UserMicroserviceClient
             if (UserID == Guid.Empty)
                 return null;
 
+            string cacheKey = $"user: {UserID}";
+            string? cachedUser = await _distributedCache.GetStringAsync(cacheKey);
+
+            if (cachedUser != null)
+            {
+                UserResponse? userFromCache = JsonSerializer.Deserialize<UserResponse>(cachedUser);
+
+                return userFromCache;
+            }
+
             HttpResponseMessage responseMessage = await _httpClient.GetAsync($"/api/users/{UserID}");
+
 
             if (!responseMessage.IsSuccessStatusCode)
             {
                 if (responseMessage.StatusCode == HttpStatusCode.NotFound)
-                    return null;
+                    return null;             
                 else if (responseMessage.StatusCode == HttpStatusCode.BadRequest)
                     throw new HttpRequestException("Bad request", null, HttpStatusCode.BadRequest);
                 else
@@ -47,10 +62,20 @@ public class UserMicroserviceClient
                 }
             }
 
-            UserResponse? returnUser = await responseMessage.Content.ReadFromJsonAsync<UserResponse>();
+            UserResponse? returnUser = await responseMessage.Content.ReadFromJsonAsync<UserResponse>();           
 
             if (returnUser == null)
                 throw new ArgumentException("Invalid user ID");
+
+            string userJson = JsonSerializer.Serialize(returnUser);
+            DistributedCacheEntryOptions cacheOptions = new DistributedCacheEntryOptions()
+                                                            .SetAbsoluteExpiration(DateTime.Now.AddMinutes(5))
+                                                            .SetSlidingExpiration(TimeSpan.FromMinutes(3));
+
+            string cacheKeyToWrite = $"user: {returnUser.UserID}";
+
+            await _distributedCache.SetStringAsync(cacheKeyToWrite, userJson, cacheOptions);
+
             return returnUser;
         }
         catch (BrokenCircuitException ex)

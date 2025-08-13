@@ -20,6 +20,11 @@ public static class DependencyInjection
         services.AddScoped<IOrdersService, OrdersService>();
         services.AddScoped<IOrdersValidator, OrdersValidator>();
         services.AddTransient<IPollyPolicies, PollyPolicies>();
+        services.AddStackExchangeRedisCache(options =>
+        {
+            options.Configuration = $"{Environment.GetEnvironmentVariable("REDIS_HOST")}:" +
+                                    $"{Environment.GetEnvironmentVariable("REDIS_PORT")}";
+        });
         
         return services;
     }

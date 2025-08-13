@@ -8,6 +8,8 @@ using System.Net;
 using System.Net.Http.Json;
 using Polly.Bulkhead;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Caching.Distributed;
+using System.Text.Json;
 
 namespace OrderService.BusinessLogicLayer.HttpClients;
 
@@ -15,10 +17,12 @@ public class ProductMicroserviceClient
 {
     private readonly HttpClient _httpClient;
     private ILogger<ProductMicroserviceClient> _logger;
-    public ProductMicroserviceClient(HttpClient httpClient, ILogger<ProductMicroserviceClient> logger)
+    private readonly IDistributedCache _distributedCache;
+    public ProductMicroserviceClient(HttpClient httpClient, ILogger<ProductMicroserviceClient> logger, IDistributedCache distributedCache)
     {
         _httpClient = httpClient;
         _logger = logger;
+        _distributedCache = distributedCache;
     }
 
     public async Task<ProductResponse?> GetProductByProdcutID(Guid ProductID)
@@ -28,6 +32,16 @@ public class ProductMicroserviceClient
             if (ProductID == Guid.Empty)
                 return null;
 
+            string cacheKey = $"product: {ProductID}";
+            string? cachedProduct = await _distributedCache.GetStringAsync(cacheKey);
+
+            if (cachedProduct != null)
+            {
+                ProductResponse? productFromCache = JsonSerializer.Deserialize<ProductResponse>(cachedProduct);
+
+                return productFromCache;
+            }
+
             HttpResponseMessage responseMessage = await _httpClient.GetAsync($"/api/products/search/productid/{ProductID}");
 
             if (!responseMessage.IsSuccessStatusCode)
@@ -36,16 +50,32 @@ public class ProductMicroserviceClient
                     return null;
                 else if (responseMessage.StatusCode == HttpStatusCode.BadRequest)
                     throw new HttpRequestException("Bad request", null, HttpStatusCode.BadRequest);
-                else
+                else if(responseMessage.StatusCode == HttpStatusCode.ServiceUnavailable)
                 {
-                    throw new HttpRequestException("Http request failed with status code", null, responseMessage.StatusCode);
-                }
+                    ProductResponse? fallbackProductResponse = await responseMessage.Content.ReadFromJsonAsync<ProductResponse>();
+
+                    if (fallbackProductResponse == null)
+                        throw new NotImplementedException("Fallback policy not implemented");
+                    return fallbackProductResponse;
+                }                    
+                else 
+                    throw new HttpRequestException("Http request failed with status code", null, responseMessage.StatusCode);                
             }
 
             ProductResponse? returnProdcut = await responseMessage.Content.ReadFromJsonAsync<ProductResponse>();
 
             if (returnProdcut == null)
                 throw new ArgumentException("Invalid Product ID");
+
+            string productJson = JsonSerializer.Serialize(returnProdcut);
+            DistributedCacheEntryOptions cacheOptions = new DistributedCacheEntryOptions()
+                                                            .SetAbsoluteExpiration(TimeSpan.FromSeconds(300))
+                                                            .SetSlidingExpiration(TimeSpan.FromSeconds(100));
+
+            string cacheKeyToWrite = $"product: {returnProdcut.ProductID}";
+
+            await _distributedCache.SetStringAsync(cacheKeyToWrite, productJson, cacheOptions);
+
             return returnProdcut;
         }
         catch (BulkheadRejectedException ex)

@@ -11,7 +11,9 @@
         "UsersMicroserviceURI": "localhost",
         "UsersMicroservicePort": "7000",
         "ProductsMicroserviceURI": "localhost",
-        "ProductsMicroservicePort": "8000"
+        "ProductsMicroservicePort": "8000",
+        "REDIS_HOST": "redis-cache",
+        "REDIS_PORT":"6379"
       },
       "dotnetRunMessages": true,
       "applicationUrl": "http://localhost:5121",
@@ -28,7 +30,9 @@
         "UsersMicroserviceURI": "localhost",
         "UsersMicroservicePort": "7000",
         "ProductsMicroserviceURI": "localhost",
-        "ProductsMicroservicePort": "8000"
+        "ProductsMicroservicePort": "8000",
+        "REDIS_HOST": "redis-cache",
+        "REDIS_PORT": "6379"
       },
       "dotnetRunMessages": true,
       "applicationUrl": "https://localhost:7095;http://localhost:5121",
@@ -39,12 +43,12 @@
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
       "environmentVariables": {
-        "ASPNETCORE_HTTPS_PORTS": "8081",
+        "ASPNETCORE_HTTPS_PORTS": "8080",
         "ASPNETCORE_HTTP_PORTS": "8080",
         "UsersMicroserviceURI": "localhost",
         "UsersMicroservicePort": "7000",
         "ProductsMicroserviceURI": "localhost",
-        "ProductsMicroservicePort": "8000"
+        "ProductsMicroservicePort": "8001"
       },
       "publishAllPorts": true,
       "useSSL": true
