@@ -83,9 +83,9 @@ services:
      - MONGO_HOST=mongodb
      - MONGO_PORT=27017
      - MONGO_DATABASE=OrdersDatabase
-     - UsersMicroserviceURI=users-microservice
-     - UsersMicroservicePort=9090 
-     - ProductsMicroserviceURI=products-microservice
+     - UsersMicroserviceURI=apigateway
+     - UsersMicroservicePort=8080
+     - ProductsMicroserviceURI=apigateway
      - ProductsMicroservicePort=8080
      - REDIS_HOST=redis-cache
      - REDIS_PORT=6379 
