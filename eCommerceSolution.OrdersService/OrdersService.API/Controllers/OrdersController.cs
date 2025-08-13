@@ -42,7 +42,7 @@ namespace OrderService.API.Controllers
             return orders;
         }
 
-        [HttpGet("search/orderid/{orderID}")]
+        [HttpGet("/api/Orders/search/orderid/{orderID}")]
         public async Task<OrderResponse?> GetOrderByOrderID(Guid orderID)
         {
             FilterDefinition<Order> filter = Builders<Order>.Filter.Eq(temp => temp.OrderID, orderID);
@@ -51,7 +51,7 @@ namespace OrderService.API.Controllers
             return order;
         }
 
-        [HttpGet("search/productid/{productID}")]
+        [HttpGet("/api/Orders/search/productid/{productID}")]
         public async Task<IEnumerable<OrderResponse>?> GetOrdersByProductID(Guid productID)
         {
             FilterDefinition<Order> filter = Builders<Order>.Filter.ElemMatch(temp => temp.OrderItems,
@@ -62,7 +62,7 @@ namespace OrderService.API.Controllers
             return orders;
         }
 
-        [HttpGet("/search/orderDate/{orderDate}")]
+        [HttpGet("/api/Orders/search/orderDate/{orderDate}")]
         public async Task<IEnumerable<OrderResponse>?> GetOrdersByOrderDate(DateTime orderDate)
         {
             FilterDefinition<Order> filter = Builders<Order>.Filter.Eq(temp => temp.OrderDate.ToString("yyyy-MM-dd"), orderDate.ToString("yyyy-MM-dd")

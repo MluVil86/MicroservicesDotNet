@@ -114,6 +114,8 @@ services:
    dockerfile: /ApiGateway/Dockerfile
   ports:
    - "2000:8080"
+  networks:
+   - ecommerce-microservice-network
 
 
 networks:

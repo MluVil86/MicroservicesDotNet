@@ -10,19 +10,222 @@
         }
       ],
       "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "UpstreamScheme": "http"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Orders/search/orderid/{orderID}",
+      "DownstreamPathTemplate": "/api/Orders/search/orderid/{orderID}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orderservice.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "UpstreamScheme": "http"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Orders/search/productid/{productID}",
+      "DownstreamPathTemplate": "/api/Orders/search/productid/{productID}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orderservice.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "UpstreamScheme": "http"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Orders/search/orderDate/{orderDate}",
+      "DownstreamPathTemplate": "/api/Orders/search/orderDate/{orderDate}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orderservice.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "UpstreamScheme": "http"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Orders/search/userId/{userId}",
+      "DownstreamPathTemplate": "/api/Orders/search/userId/{userId}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orderservice.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "UpstreamScheme": "http"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Orders/{orderID}",
+      "DownstreamPathTemplate": "/api/Orders/{orderID}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orderservice.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamHttpMethod": [
+        "Put",
+        "Delete",
+        "Options"
+      ],
+      "UpstreamScheme": "http"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Products",
+      "DownstreamPathTemplate": "/api/Products",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "products-microservice",
+          "Port": 8080
+        }
+      ],
+      "UpstreamHttpMethod": [
         "Get",
+        "Post",
+        "Put",
+        "Options"
+      ],
+      "UpstreamScheme": "http"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Products/delete/{ProductId}",
+      "DownstreamPathTemplate": "/api/Products/delete/{ProductId}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "products-microservice",
+          "Port": 8080
+        }
+      ],
+      "UpstreamHttpMethod": [
+        "Get",
+        "Options"
+      ],
+      "UpstreamScheme": "http"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Products/update",
+      "DownstreamPathTemplate": "/api/Products/update",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "products-microservice",
+          "Port": 8080
+        }
+      ],
+      "UpstreamHttpMethod": [
+        "Put",
+        "Options"
+      ],
+      "UpstreamScheme": "http"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/products/add",
+      "DownstreamPathTemplate": "/api/products/add",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "products-microservice",
+          "Port": 8080
+        }
+      ],
+      "UpstreamHttpMethod": [
         "Post",
         "Options"
       ],
       "UpstreamScheme": "http"
-
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/products/search/{SearchString}",
+      "DownstreamPathTemplate": "/api/products/search/{SearchString}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "products-microservice",
+          "Port": 8080
+        }
+      ],
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "UpstreamScheme": "http"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/products/search/productid/{ProductId}",
+      "DownstreamPathTemplate": "/api/products/search/productid/{ProductId}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "products-microservice",
+          "Port": 8080
+        }
+      ],
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "UpstreamScheme": "http"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/auth/register",
+      "DownstreamPathTemplate": "/api/auth/register",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "users-microservice",
+          "Port": 9090
+        }
+      ],
+      "UpstreamHttpMethod": [
+        "Post",
+        "Options"
+      ],
+      "UpstreamScheme": "http"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/auth/login",
+      "DownstreamPathTemplate": "/api/auth/login",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "users-microservice",
+          "Port": 9090
+        }
+      ],
+      "UpstreamHttpMethod": [
+        "Post",
+        "Options"
+      ],
+      "UpstreamScheme": "http"
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/users/{userID}",
+      "DownstreamPathTemplate": "/api/users/{userID}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "users-microservice",
+          "Port": 9090
+        }
+      ],
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "UpstreamScheme": "http"
     }
   ],
+
   "GlobalConfiguration": {
     "BaseUrl":  "http://localhost:2000"
-
   }
 }
 
 
-/*http://localhost:2000/gatewat/Orders will forward request to http://orderservice.api:8080/api/Orders */
+/*http://localhost:2000/gateway/Orders will forward request to http://orderservice.api:8080/api/Orders */
