@@ -13,10 +13,15 @@
         "Get"
       ],
       "UpstreamScheme": "http",
+      "FileCacheOptions": {
+        "Region": "Orders", //creates the cache in a specified name or region
+        "TtlSeconds": 30 //cache results for 30 seconds
+      },
+     
       "QoSOptions": {   //Polly policy configuration
         "ExceptionsAllowedBeforeBreaking": 3,
         "DurationOfBreak": 10000, //10 seconds
-        "TimeoutValue": 5000 //5 seconds
+        "TimeoutValue": 60000 //5 seconds = 5000
       },
       "RetryOptions": {
         "RetryCount": 3,
@@ -24,11 +29,16 @@
       },
       "RateLimitOptions": {
         "Limit": 3,
-        "Period": "30s",  //h for hours, m for minutes, ms for milliseconfs
+        "Period": "30s", //h for hours, m for minutes, ms for milliseconfs
         "HttpStatusCode": 429,
         "EnableRateLimiting": true,
-        "PeriodTimespan": 30  //default is in seconds
-      }
+        "PeriodTimespan": 30 //default is in seconds
+      },
+      "ClientWhitelist": [
+        "Client1", //names of client whitelisted
+        "Client2"
+      ],
+      "ClientIdHeader": "Client-Id"  //can be header key or Id
     },
     {
       "UpstreamPathTemplate": "/gateway/Orders/search/orderid/{orderID}",
