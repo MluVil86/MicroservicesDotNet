@@ -1,6 +1,7 @@
 ﻿using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using ProductsService.BusinessLogicLayer.Mapper;
+using ProductsService.BusinessLogicLayer.RabbitMQ;
 using ProductsService.BusinessLogicLayer.ServiceContracts;
 using ProductsService.BusinessLogicLayer.Services;
 using ProductsService.BusinessLogicLayer.Validation;
@@ -18,6 +19,7 @@ public static class DependancyInjection
         services.AddValidatorsFromAssemblyContaining<ProductAddRequestValidator>();
 
         services.AddScoped<IProductService, ProductService>();
+        services.AddTransient<IRabbitMQPublisher, RabbitMQPublisher>(); 
 
         return services;
     }

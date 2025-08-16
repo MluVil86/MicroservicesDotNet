@@ -70,6 +70,7 @@ services:
    - RABBITMQ_PORT=5672 
    - RABBITMQ_USERNAME=admin
    - RABBITMQ_PASSWORD=p@ssw0rd 
+   - RABBITMQ_PRODUCTS_EXCHANGE=products.exchange
   ports:
    - "8000:8080"
   networks:
@@ -97,6 +98,7 @@ services:
      - RABBITMQ_PORT=5672 
      - RABBITMQ_USERNAME=admin
      - RABBITMQ_PASSWORD=p@ssw0rd
+     - RABBITMQ_PRODUCTS_EXCHANGE=products.exchange
     ports:
      - "4000:8080"
     networks:
