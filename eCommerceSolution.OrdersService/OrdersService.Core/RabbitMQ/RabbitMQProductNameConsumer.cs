@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using RabbitMQ.Client;
+using RabbitMQ.Client.Events;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -53,6 +54,19 @@ namespace OrderService.BusinessLogicLayer.RabbitMQ
 
             //bind the message to exchange
             await _channel.QueueBindAsync(queue: queueName, exchange: exchangeName, routingKey: routingKey);
+
+            AsyncEventingBasicConsumer consumer = new AsyncEventingBasicConsumer(_channel);
+
+            consumer.ReceivedAsync += (sender, args) => 
+            {
+                byte [] body = args.Body.ToArray();
+                string message = Encoding.UTF8.GetString(body);
+
+
+            
+            
+            };
+            await _channel.BasicConsumeAsync(queue: queueName, consumer:consumer, autoAck: true);
         }
 
         public void Dispose()
